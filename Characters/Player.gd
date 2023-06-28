@@ -23,7 +23,7 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	camera_y_diff = camera.position.y - position.y
 
-func _process(delta):		
+func _process(delta):
 	if Input.is_action_just_pressed("DEBUG_toggle_perspective"):
 		camera_dist = camera_dist_third if camera_dist == camera_dist_first else camera_dist_first
 

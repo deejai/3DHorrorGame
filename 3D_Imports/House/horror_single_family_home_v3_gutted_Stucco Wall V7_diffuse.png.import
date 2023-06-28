@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:38234cff6a00ccef5126d73138506fc896e2a6c0dfed3a44852bd0e95f368126
-size 997
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://df2b0j0l5idbu"
+path.s3tc="res://.godot/imported/horror_single_family_home_v3_gutted_Stucco Wall V7_diffuse.png-117c8483f85792ef8330739b986c3aca.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://3D_Imports/House/horror_single_family_home_v3_gutted_Stucco Wall V7_diffuse.png"
+dest_files=["res://.godot/imported/horror_single_family_home_v3_gutted_Stucco Wall V7_diffuse.png-117c8483f85792ef8330739b986c3aca.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

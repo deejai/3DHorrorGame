@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be8d742d1bce482454bc7f922402d99c4423ca216417d672d058ec7c86b379f3
-size 1181
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b1r83gvmg5r2g"
+path.s3tc="res://.godot/imported/horror_single_family_home_v3_gutted_0_attic_floor_divider_secondfloorceiling_NORMAL.png-61598e631f318bff8a64bb9866dd8d8e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://3D_Imports/House/horror_single_family_home_v3_gutted_0_attic_floor_divider_secondfloorceiling_NORMAL.png"
+dest_files=["res://.godot/imported/horror_single_family_home_v3_gutted_0_attic_floor_divider_secondfloorceiling_NORMAL.png-61598e631f318bff8a64bb9866dd8d8e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3D_Imports/House/horror_single_family_home_v3_gutted_0_attic_floor_divider_secondfloorceiling_NORMAL.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

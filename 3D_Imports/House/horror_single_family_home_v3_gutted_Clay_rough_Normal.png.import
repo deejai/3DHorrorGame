@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fc7e84684c0647d984de94d72be2bfad030b69588ce3d1d45dc2c8383b20ed6
-size 1062
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://yqo53boylxbj"
+path.s3tc="res://.godot/imported/horror_single_family_home_v3_gutted_Clay_rough_Normal.png-35ab24913714eb2e8cbe6c2e50324af1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://3D_Imports/House/horror_single_family_home_v3_gutted_Clay_rough_Normal.png"
+dest_files=["res://.godot/imported/horror_single_family_home_v3_gutted_Clay_rough_Normal.png-35ab24913714eb2e8cbe6c2e50324af1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3D_Imports/House/horror_single_family_home_v3_gutted_Clay_rough_Normal.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

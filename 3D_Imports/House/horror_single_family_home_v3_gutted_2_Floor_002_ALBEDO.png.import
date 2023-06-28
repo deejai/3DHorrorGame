@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9807812fe24501557bc26a3e9e1ccc7105ee1a69f1308773458939e754abb589
-size 985
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cyeqcqd8kgxx8"
+path.s3tc="res://.godot/imported/horror_single_family_home_v3_gutted_2_Floor_002_ALBEDO.png-fce7395fbcc5ad0894c3c0ea213a2fa0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={}
+
+[deps]
+
+source_file="res://3D_Imports/House/horror_single_family_home_v3_gutted_2_Floor_002_ALBEDO.png"
+dest_files=["res://.godot/imported/horror_single_family_home_v3_gutted_2_Floor_002_ALBEDO.png-fce7395fbcc5ad0894c3c0ea213a2fa0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
