@@ -1,12 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwxgq54exfs8d"]
+[gd_scene load_steps=14 format=3 uid="uid://dwxgq54exfs8d"]
 
 [ext_resource type="Script" path="res://Objects/Doors/DoorAssembly.gd" id="1_va8qo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2upp"]
-resource_name = "Door_material"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-metallic = 1.0
+[ext_resource type="Material" uid="uid://ca0bypb6rjcqw" path="res://Materials/House/VerticalBrownWood.tres" id="2_ukoay"]
+[ext_resource type="Script" path="res://Objects/Doors/OpenDoorInteractiveArea.gd" id="2_upcma"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7sjsc"]
 _surfaces = [{
@@ -28,7 +24,7 @@ _surfaces = [{
 "format": 4099,
 "index_count": 141,
 "index_data": PackedByteArray(9, 0, 3, 0, 13, 0, 9, 0, 1, 0, 3, 0, 25, 0, 56, 0, 37, 0, 25, 0, 30, 0, 56, 0, 10, 0, 19, 0, 6, 0, 10, 0, 15, 0, 19, 0, 31, 0, 14, 0, 33, 0, 31, 0, 18, 0, 14, 0, 38, 0, 61, 0, 57, 0, 38, 0, 41, 0, 61, 0, 49, 0, 46, 0, 44, 0, 49, 0, 51, 0, 46, 0, 34, 0, 66, 0, 69, 0, 34, 0, 17, 0, 66, 0, 58, 0, 35, 0, 39, 0, 58, 0, 22, 0, 35, 0, 59, 0, 0, 0, 7, 0, 59, 0, 62, 0, 0, 0, 29, 0, 20, 0, 32, 0, 29, 0, 23, 0, 20, 0, 40, 0, 48, 0, 43, 0, 40, 0, 45, 0, 48, 0, 11, 0, 5, 0, 27, 0, 11, 0, 2, 0, 5, 0, 83, 0, 79, 0, 87, 0, 83, 0, 85, 0, 79, 0, 24, 0, 8, 0, 21, 0, 24, 0, 60, 0, 8, 0, 28, 0, 16, 0, 12, 0, 28, 0, 65, 0, 16, 0, 42, 0, 52, 0, 4, 0, 42, 0, 47, 0, 52, 0, 50, 0, 5, 0, 53, 0, 50, 0, 27, 0, 5, 0, 81, 0, 55, 0, 74, 0, 81, 0, 36, 0, 55, 0, 82, 0, 72, 0, 78, 0, 82, 0, 75, 0, 72, 0, 73, 0, 67, 0, 70, 0, 73, 0, 54, 0, 67, 0, 64, 0, 71, 0, 68, 0, 64, 0, 77, 0, 71, 0, 84, 0, 77, 0, 50, 0, 84, 0, 88, 0, 77, 0, 45, 0, 80, 0, 86, 0, 45, 0, 81, 0, 80, 0, 26, 0, 76, 0, 63, 0),
-"material": SubResource("StandardMaterial3D_t2upp"),
+"material": ExtResource("2_ukoay"),
 "name": "Door_material",
 "primitive": 3,
 "vertex_count": 89,
@@ -57,7 +53,7 @@ _surfaces = [{
 "format": 4099,
 "index_count": 36,
 "index_data": PackedByteArray(14, 0, 5, 0, 17, 0, 14, 0, 2, 0, 5, 0, 16, 0, 8, 0, 20, 0, 16, 0, 4, 0, 8, 0, 18, 0, 9, 0, 21, 0, 18, 0, 6, 0, 9, 0, 22, 0, 0, 0, 12, 0, 22, 0, 10, 0, 0, 0, 1, 0, 7, 0, 3, 0, 1, 0, 11, 0, 7, 0, 23, 0, 15, 0, 19, 0, 23, 0, 13, 0, 15, 0),
-"material": SubResource("StandardMaterial3D_t2upp"),
+"material": ExtResource("2_ukoay"),
 "name": "Door_material",
 "primitive": 3,
 "vertex_count": 24,
@@ -70,6 +66,7 @@ shadow_mesh = SubResource("ArrayMesh_entea")
 resource_name = "Handle_material"
 cull_mode = 2
 vertex_color_use_as_albedo = true
+albedo_color = Color(0.666667, 0.666667, 0.666667, 1)
 metallic = 1.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pdek1"]
@@ -134,8 +131,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_18ftv")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5ho3"]
+size = Vector3(1, 2.2, 0.05)
+
 [node name="CommonInsideDoor" type="Node3D" node_paths=PackedStringArray("door_node")]
 script = ExtResource("1_va8qo")
+closed_angle = -0.618
 door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
 [node name="common_inside_door" type="Node3D" parent="."]
@@ -147,7 +148,7 @@ mesh = SubResource("ArrayMesh_xdk4q")
 skeleton = NodePath("")
 
 [node name="Door_004" type="MeshInstance3D" parent="common_inside_door/downstairs_bathroom_door/DoorFrame_004"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35921, 0.00400008, -0.0329918)
+transform = Transform3D(0.815219, 0, -0.579153, 0, 1, 0, 0.579153, 0, 0.815219, -0.35921, 0.00400008, -0.0218339)
 mesh = SubResource("ArrayMesh_1pi2e")
 skeleton = NodePath("")
 
@@ -160,3 +161,13 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35921, -0.00400008, 0.0329918)
 mesh = SubResource("ArrayMesh_bjhe7")
 skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004" node_paths=PackedStringArray("door_assembly")]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("2_upcma")
+door_assembly = NodePath("../../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004/Area3D"]
+transform = Transform3D(0.832344, 0, 0.554266, 0, 1, 0, -0.554266, 0, 0.832344, 0.389686, 0.952521, -0.262021)
+shape = SubResource("BoxShape3D_l5ho3")

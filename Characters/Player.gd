@@ -5,6 +5,7 @@ extends CharacterBody3D
 var camera_dist_first: float = 0.0
 var camera_dist_third: float = 1.0
 var camera_dist: float = camera_dist_first
+var camera_y_diff: float
 
 @onready var pause_menu: PauseMenu = $PauseMenu
 
@@ -17,11 +18,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var direction: Vector3 = Vector3.ZERO
 
-@onready var mesh: CSGMesh3D = $CSGMesh3D
-
 func _ready():
 #	get_viewport().warp_mouse(Vector2(ProjectSettings.get("display/window/size/viewport_width")/2, ProjectSettings.get("display/window/size/viewport_height")))
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	camera_y_diff = camera.position.y - position.y
 
 func _process(delta):		
 	if Input.is_action_just_pressed("DEBUG_toggle_perspective"):
@@ -57,7 +57,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	camera.position = position + Vector3.UP * 1.0 + Vector3.FORWARD.rotated(Vector3.UP, camera.rotation.y) * -camera_dist
+	camera.position = position + Vector3.UP * camera_y_diff + Vector3.FORWARD.rotated(Vector3.UP, camera.rotation.y) * -camera_dist
 
 func _input(event):
 	if event is InputEventMouseMotion:
