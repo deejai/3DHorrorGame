@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpmgrajlo7i8v"]
+
+[ext_resource type="Script" path="res://PauseMenu.gd" id="1_lrn13"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_lrn13")
+
+[node name="QuitButton" type="Button" parent="."]
+modulate = Color(1, 0.25098, 0, 1)
+offset_left = 217.0
+offset_top = 93.0
+offset_right = 1031.0
+offset_bottom = 124.0
+rotation = 0.292812
+text = "q u i t       t h e      g a m e        ?"
+
+[node name="CancelButton" type="Button" parent="."]
+modulate = Color(1, 0.0117647, 1, 1)
+offset_left = 500.0
+offset_top = 495.0
+offset_right = 946.0
+offset_bottom = 564.0
+rotation = -0.489825
+text = "c      a      n      c      e      l"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CancelButton" to="." method="_on_cancel_button_pressed"]

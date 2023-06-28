@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://yg3adf7flbjk"]
+
+[ext_resource type="Script" path="res://Demo.gd" id="1_l5xpl"]
+[ext_resource type="PackedScene" uid="uid://dvqwpi1w8vd1p" path="res://key.glb" id="3_5tfjs"]
+[ext_resource type="PackedScene" uid="uid://bxhb4tf4mucxs" path="res://Characters/Player.tscn" id="3_k1u0q"]
+[ext_resource type="PackedScene" uid="uid://sd7a7hjuj1vo" path="res://Item.tscn" id="4_b4obp"]
+[ext_resource type="PackedScene" uid="uid://cxm4dnidgb6p1" path="res://Objects/House/House.tscn" id="6_vexjd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h20ek"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybmvj"]
+sky_top_color = Color(0.133333, 0.168627, 0.215686, 1)
+sky_horizon_color = Color(0.235294, 0.219608, 0.309804, 1)
+
+[sub_resource type="Sky" id="Sky_g0tmy"]
+sky_material = SubResource("ProceduralSkyMaterial_ybmvj")
+
+[sub_resource type="Environment" id="Environment_qg7kn"]
+background_mode = 2
+sky = SubResource("Sky_g0tmy")
+fog_light_color = Color(0.101961, 0.117647, 0.137255, 1)
+fog_density = 0.04
+fog_sky_affect = 0.895
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1003
+volumetric_fog_albedo = Color(1, 0.952941, 1, 1)
+volumetric_fog_length = 70.84
+adjustment_enabled = true
+adjustment_brightness = 0.43
+adjustment_contrast = 1.16
+adjustment_saturation = 0.06
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_l5xpl")
+
+[node name="Player" parent="." instance=ExtResource("3_k1u0q")]
+
+[node name="key" parent="." instance=ExtResource("3_5tfjs")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.34123, 1.72901, 0)
+
+[node name="Item" parent="." instance=ExtResource("4_b4obp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29621, 2.72186, 2.33452)
+
+[node name="House" parent="." instance=ExtResource("6_vexjd")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.81809, 0.639377, 0)
+mesh = SubResource("BoxMesh_h20ek")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qg7kn")
