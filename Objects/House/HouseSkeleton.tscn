@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://1i11036nn3jj"]
+
+[ext_resource type="PackedScene" uid="uid://dwd6rfbqroclv" path="res://3D_Imports/House/horror_single_family_home_v3_gutted.glb" id="1_t8o1f"]
+
+[node name="HouseSkeleton" type="Node3D"]
+
+[node name="horror_single_family_home_v3_gutted" parent="." instance=ExtResource("1_t8o1f")]

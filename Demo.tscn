@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://yg3adf7flbjk"]
+[gd_scene load_steps=8 format=3 uid="uid://yg3adf7flbjk"]
 
 [ext_resource type="Script" path="res://Demo.gd" id="1_l5xpl"]
 [ext_resource type="PackedScene" uid="uid://dvqwpi1w8vd1p" path="res://key.glb" id="3_5tfjs"]
 [ext_resource type="PackedScene" uid="uid://bxhb4tf4mucxs" path="res://Characters/Player.tscn" id="3_k1u0q"]
 [ext_resource type="PackedScene" uid="uid://sd7a7hjuj1vo" path="res://Item.tscn" id="4_b4obp"]
-[ext_resource type="PackedScene" uid="uid://cxm4dnidgb6p1" path="res://Objects/House/House.tscn" id="6_vexjd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybmvj"]
 sky_top_color = Color(0.133333, 0.168627, 0.215686, 1)
@@ -38,8 +37,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.34123, 1.72901, 0)
 
 [node name="Item" parent="." instance=ExtResource("4_b4obp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29621, 2.72186, 2.33452)
-
-[node name="House" parent="." instance=ExtResource("6_vexjd")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qg7kn")
