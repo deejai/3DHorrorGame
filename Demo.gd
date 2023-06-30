@@ -8,3 +8,8 @@ func _ready():
 func _process(delta):
 #	front_door_skeleton.rotate(Vector3.UP, 5.0 * delta)
 	pass
+
+
+func _on_area_3d_body_entered(body):
+	if body is Player:
+		$AudioStreamPlayer.play()

@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+class_name Player
+
 @onready var camera: Camera3D = $CameraNode/Camera3D
 @onready var grab_ray: RayCast3D = $CameraNode/Camera3D/GrabRay
 var camera_dist_first: float = 0.0
@@ -9,7 +11,7 @@ var camera_y_diff: float
 
 @onready var pause_menu: PauseMenu = $PauseMenu
 
-const SPEED = 5.0
+const SPEED = 2.5
 const JUMP_VELOCITY = 4.5
 const mouse_sens: float = 1.0
 

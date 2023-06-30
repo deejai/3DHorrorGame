@@ -1,7 +1,225 @@
-[gd_scene load_steps=2 format=3 uid="uid://1i11036nn3jj"]
+[gd_scene load_steps=27 format=3 uid="uid://1i11036nn3jj"]
 
 [ext_resource type="PackedScene" uid="uid://dwd6rfbqroclv" path="res://3D_Imports/House/horror_single_family_home_v3_gutted.glb" id="1_t8o1f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_30yi2"]
+size = Vector3(4.60488, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wwp3r"]
+size = Vector3(1.34229, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_60fwp"]
+size = Vector3(5.90606, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2p6vl"]
+size = Vector3(2.48603, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0pj4g"]
+size = Vector3(1.76761, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tt05p"]
+size = Vector3(0.310817, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q010i"]
+size = Vector3(1.02082, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xtxpa"]
+size = Vector3(1.05687, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nn4sa"]
+size = Vector3(4.26943, 2.38154, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jnyai"]
+size = Vector3(1.07478, 0.307122, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_smitj"]
+size = Vector3(1.07478, 0.307122, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wd8h8"]
+size = Vector3(1.07478, 0.307122, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_po06i"]
+size = Vector3(1.07478, 0.307122, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2p2r"]
+size = Vector3(0.001, 4.79298, 3.21025)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3w7xt"]
+size = Vector3(0.001, 4.79298, 1.42315)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpyf3"]
+size = Vector3(0.001, 4.79298, 3.45879)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i8aos"]
+size = Vector3(0.001, 4.79298, 2.0119)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_608hl"]
+size = Vector3(1.07478, 0.272713, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vct7"]
+size = Vector3(0.904234, 2.39228, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7m3w5"]
+size = Vector3(1.25817, 2.39228, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_87v8y"]
+size = Vector3(1.07478, 0.307122, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xiakf"]
+size = Vector3(0.1, 2.24225, 1.81801)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3ok4"]
+size = Vector3(0.1, 2.35093, 3.10181)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ql3fc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_773uk"]
+points = PackedVector3Array(-0.75, 0, 2.15, 0.75, 0, 2.15, -0.75, 0, -2.15, 0.75, 0, -2.15, -0.75, 2.5, -2.15, 0.75, 2.5, -2.15)
 
 [node name="HouseSkeleton" type="Node3D"]
 
 [node name="horror_single_family_home_v3_gutted" parent="." instance=ExtResource("1_t8o1f")]
+
+[node name="HouseInnerDetailsStaticBodySecondFloor" type="StaticBody3D" parent="."]
+
+[node name="MasterBedroomInsideLongWall" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.122139, 3.70536, 1.1683)
+shape = SubResource("BoxShape3D_30yi2")
+
+[node name="MasterBedroomClosetWallTowardStairs" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.87574, 3.70536, 3.45333)
+shape = SubResource("BoxShape3D_wwp3r")
+
+[node name="MasterBedroomClosetWallTowardKidsRoom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.71869, 3.70536, 4.20044)
+shape = SubResource("BoxShape3D_wwp3r")
+
+[node name="KidsRoomInsideLongWall" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.75945, 3.70536, 1.93792)
+shape = SubResource("BoxShape3D_60fwp")
+
+[node name="KidsRoomShortWallByBathroom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.66866, 3.70536, -1.84427)
+shape = SubResource("BoxShape3D_2p6vl")
+
+[node name="UpperBathroomNearKidsRoom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.4185, 3.70536, -2.72383)
+shape = SubResource("BoxShape3D_0pj4g")
+
+[node name="UpperBathroomNubWall" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.4185, 3.70536, -4.76874)
+shape = SubResource("BoxShape3D_tt05p")
+
+[node name="OfficeNubWall" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.64327, 3.70536, -4.46173)
+shape = SubResource("BoxShape3D_q010i")
+
+[node name="OfficeShortWallNearMasterBedroom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.64327, 3.70536, -2.41846)
+shape = SubResource("BoxShape3D_xtxpa")
+
+[node name="OfficeLongWallNearMasterBedroom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.78206, 3.70536, -1.88126)
+shape = SubResource("BoxShape3D_nn4sa")
+
+[node name="KidsRoomAboveDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(0.652045, 0, -0.75818, 0, 1, 0, 0.75818, 0, 0.652045, -2.10459, 4.75533, -1.43092)
+shape = SubResource("BoxShape3D_jnyai")
+
+[node name="OfficeAboveDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-0.0172256, 0, -0.999852, 0, 1, 0, 0.999852, 0, -0.0172256, 0.642613, 4.75533, -3.46995)
+shape = SubResource("BoxShape3D_smitj")
+
+[node name="UpperBathroomAboveDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-0.0172256, 0, -0.999852, 0, 1, 0, 0.999852, 0, -0.0172256, -2.40814, 4.75533, -4.09957)
+shape = SubResource("BoxShape3D_wd8h8")
+
+[node name="MasterBedroomAboveDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodySecondFloor"]
+transform = Transform3D(-0.693263, 0, -0.720684, 0, 1, 0, 0.720684, 0, -0.693263, 0.243386, 4.75533, -1.51571)
+shape = SubResource("BoxShape3D_po06i")
+
+[node name="HouseInnerDetailsStaticBodyFirstFloor" type="StaticBody3D" parent="."]
+
+[node name="StairsRailingCollision" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161333, 0, 0.958876)
+shape = SubResource("BoxShape3D_g2p2r")
+
+[node name="KitchenLivingRoomDividerOutside" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.3717, -0.0118093, -2.19991)
+shape = SubResource("BoxShape3D_3w7xt")
+
+[node name="KitchenLivingRoomDividerByLaundryTowardLivingRoom" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.183446, -0.0118093, -2.19991)
+shape = SubResource("BoxShape3D_xpyf3")
+
+[node name="KitchenLivingRoomDividerByLaundryOutside" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.90249, -0.0118093, -2.19991)
+shape = SubResource("BoxShape3D_i8aos")
+
+[node name="KitchenAboveLaundryDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38929, 2.24773, -2.20192)
+shape = SubResource("BoxShape3D_608hl")
+
+[node name="LowerBathroomLeftOfDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44243, 1.20524, 3.22041)
+shape = SubResource("BoxShape3D_3vct7")
+
+[node name="LowerBathroomRightOfDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33804, 1.20524, 3.22041)
+shape = SubResource("BoxShape3D_7m3w5")
+
+[node name="LowerBathroomAboveDoor" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.50378, 2.25331, 3.22041)
+shape = SubResource("BoxShape3D_87v8y")
+
+[node name="HarryPotterWall" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91992, 1.21702, -1.15817)
+shape = SubResource("BoxShape3D_xiakf")
+
+[node name="LowerBathroomWallRear" type="CollisionShape3D" parent="HouseInnerDetailsStaticBodyFirstFloor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.35185, 1.21702, -0.146231)
+shape = SubResource("BoxShape3D_d3ok4")
+
+[node name="HouseSkeletonStaticBody" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HouseSkeletonStaticBody"]
+shape = SubResource("WorldBoundaryShape3D_ql3fc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.900504, 0, 1.09082)
+shape = SubResource("ConvexPolygonShape3D_773uk")
+
+[node name="FloorDividerCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.468, 0)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 5, 5, 5, 5, -5, -0.18, -5, -0.18, 1.08, -1.65, 1.08, -1.67455, -3.50625, -0.179826, -3.53408, -0.189398, -5.00207)
+
+[node name="FrontOuterCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.06581e-14, 0, -1.06581e-14, 1, 0, 5, 5)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5, 0.646, -5, 0.646, -2.815, -0.379, -2.815, -0.379, -5)
+
+[node name="RightOuterCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(-4.37114e-08, -1.06581e-14, 1, 0, 1, 1.06581e-14, -1, 4.65882e-22, -4.37114e-08, 5, 5, 0)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5, 4.127, -5, 4.12951, -2.92482, 3.11239, -2.90888, 3.113, -5)
+
+[node name="LeftOuterCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(-4.37114e-08, 1.06581e-14, -1, 0, 1, 1.06581e-14, 1, 4.65882e-22, -4.37114e-08, -5, 5, 0)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5)
+
+[node name="AtticFloorCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 4.65882e-22, -4.37114e-08, 0, 4.81279, 0)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 5, 5, 5, 5, -5)
+
+[node name="RearOuterCollision" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(-1, -9.31764e-22, 8.74228e-08, 0, 1, 1.06581e-14, -8.74228e-08, 1.06581e-14, -1, 0, 5, -5)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5)
+
+[node name="RearOuterCollision2" type="CollisionPolygon3D" parent="HouseSkeletonStaticBody"]
+transform = Transform3D(-1, -9.31764e-22, 8.74228e-08, 0, 1, 1.06581e-14, -8.74228e-08, 1.06581e-14, -1, 0, 5, -5)
+depth = 0.1
+polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5)
