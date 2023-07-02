@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://b25l3is8d04lk"]
+
+[ext_resource type="Script" path="res://Autoloads/Main.gd" id="1_ljhjx"]
+[ext_resource type="Script" path="res://Autoloads/TransitionNode.gd" id="2_mn5k2"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ljhjx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionNode" type="Node2D" parent="CanvasLayer"]
+script = ExtResource("2_mn5k2")
+
+[node name="FadeCover" type="Polygon2D" parent="CanvasLayer/TransitionNode"]
+visible = false
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-90, -91, -60, 760, 1257, 681, 1238, -131)
+
+[node name="TransitionTimerPre" type="Timer" parent="CanvasLayer/TransitionNode"]
+one_shot = true
+
+[node name="TransitionTimerWait" type="Timer" parent="CanvasLayer/TransitionNode"]
+one_shot = true
+
+[node name="TransitionTimerPost" type="Timer" parent="CanvasLayer/TransitionNode"]
+one_shot = true
+
+[node name="MouseScreen" type="Panel" parent="CanvasLayer/TransitionNode"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_left = -39.0
+offset_top = -30.0
+offset_right = 1188.0
+offset_bottom = 674.0
+
+[connection signal="timeout" from="CanvasLayer/TransitionNode/TransitionTimerPre" to="CanvasLayer/TransitionNode" method="_on_transition_timer_pre_timeout"]
+[connection signal="timeout" from="CanvasLayer/TransitionNode/TransitionTimerWait" to="CanvasLayer/TransitionNode" method="_on_transition_timer_wait_timeout"]
+[connection signal="timeout" from="CanvasLayer/TransitionNode/TransitionTimerPost" to="CanvasLayer/TransitionNode" method="_on_transition_timer_post_timeout"]

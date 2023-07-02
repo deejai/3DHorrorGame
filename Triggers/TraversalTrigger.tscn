@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://duc6ds8dn87om"]
+
+[ext_resource type="Script" path="res://Triggers/TraversalTrigger.gd" id="1_fmgcw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_knbqn"]
+size = Vector3(1.4, 2, 0.3)
+
+[node name="TraversalTrigger" type="Node3D"]
+script = ExtResource("1_fmgcw")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_knbqn")
+
+[node name="ForwardRay" type="RayCast3D" parent="."]
+enabled = false
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -2,12 +2,11 @@ extends CharacterBody3D
 
 class_name Player
 
-@onready var camera: Camera3D = $CameraNode/Camera3D
+@onready var camera_node: Node3D = $CameraNode/Camera3D
 @onready var grab_ray: RayCast3D = $CameraNode/Camera3D/GrabRay
 var camera_dist_first: float = 0.0
 var camera_dist_third: float = 1.0
 var camera_dist: float = camera_dist_first
-var camera_y_diff: float
 
 @onready var pause_menu: PauseMenu = $PauseMenu
 
@@ -20,12 +19,19 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var direction: Vector3 = Vector3.ZERO
 
+var prev_position: Vector3
+
+@onready var delay_input_timer: Timer = $DelayInputTimer
+
 func _ready():
 #	get_viewport().warp_mouse(Vector2(ProjectSettings.get("display/window/size/viewport_width")/2, ProjectSettings.get("display/window/size/viewport_height")))
+	prev_position = position
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	camera_y_diff = camera.position.y - position.y
 
 func _process(delta):
+	if !delay_input_timer.is_stopped():
+		return
+
 	if Input.is_action_just_pressed("DEBUG_toggle_perspective"):
 		camera_dist = camera_dist_third if camera_dist == camera_dist_first else camera_dist_first
 
@@ -59,13 +65,13 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	camera.position = position + Vector3.UP * camera_y_diff + Vector3.FORWARD.rotated(Vector3.UP, camera.rotation.y) * -camera_dist
-
 func _input(event):
+	if !delay_input_timer.is_stopped():
+		return
+
 	if event is InputEventMouseMotion:
 		# up and down camera rotation
-		camera.rotation.x = clampf(camera.rotation.x - (event.relative.y * mouse_sens * PI/1000), -PI/2, PI/2)
+		camera_node.rotation.x = clampf(camera_node.rotation.x - (event.relative.y * mouse_sens * PI/1000), -PI/2, PI/2)
 
 		# left right body rotation
 		rotation.y = rotation.y - (event.relative.x * mouse_sens * PI/1000)
-		camera.rotation.y = rotation.y

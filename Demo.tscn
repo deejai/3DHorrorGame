@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://yg3adf7flbjk"]
+[gd_scene load_steps=10 format=3 uid="uid://yg3adf7flbjk"]
 
 [ext_resource type="Script" path="res://Demo.gd" id="1_l5xpl"]
 [ext_resource type="PackedScene" uid="uid://dvqwpi1w8vd1p" path="res://key.glb" id="3_5tfjs"]
 [ext_resource type="PackedScene" uid="uid://bxhb4tf4mucxs" path="res://Characters/Player.tscn" id="3_k1u0q"]
 [ext_resource type="PackedScene" uid="uid://sd7a7hjuj1vo" path="res://Item.tscn" id="4_b4obp"]
-[ext_resource type="AudioStream" uid="uid://cmx44tgfri7xv" path="res://Audio/Ambience/HORROR_AMBIANCE.mp3" id="6_3vxf3"]
 [ext_resource type="PackedScene" uid="uid://cmq7svbamnbmb" path="res://Objects/House/House.tscn" id="6_vexjd"]
+[ext_resource type="PackedScene" uid="uid://duc6ds8dn87om" path="res://Triggers/TraversalTrigger.tscn" id="7_4nexw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybmvj"]
 sky_top_color = Color(0.133333, 0.168627, 0.215686, 1)
@@ -29,12 +29,12 @@ adjustment_brightness = 0.43
 adjustment_contrast = 1.16
 adjustment_saturation = 0.74
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mdket"]
-
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86232, -1.08413, 0.184434)
 script = ExtResource("1_l5xpl")
 
 [node name="Player" parent="." instance=ExtResource("3_k1u0q")]
+transform = Transform3D(0.959737, 0, 0.280901, 0, 1, 0, -0.280901, 0, 0.959737, 2.94435, 0.764432, 13.2319)
 
 [node name="key" parent="." instance=ExtResource("3_5tfjs")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.34123, 1.72901, 0)
@@ -47,13 +47,13 @@ environment = SubResource("Environment_qg7kn")
 
 [node name="House" parent="." instance=ExtResource("6_vexjd")]
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.984893, 1.50344, 1.34534)
+[node name="GoUpstairsTrigger" parent="." instance=ExtResource("7_4nexw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.764019, 3.0494, -0.245593)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_mdket")
+[node name="GoIntoUpstairsBathroomTrigger" parent="." instance=ExtResource("7_4nexw")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -2.75134, 3.17243, -4.19056)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_3vxf3")
-
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="entered" from="GoUpstairsTrigger" to="." method="_on_go_upstairs_trigger_entered"]
+[connection signal="exited" from="GoUpstairsTrigger" to="." method="_on_go_upstairs_trigger_exited"]
+[connection signal="entered" from="GoIntoUpstairsBathroomTrigger" to="." method="_on_go_into_upstairs_bathroom_trigger_entered"]
+[connection signal="exited" from="GoIntoUpstairsBathroomTrigger" to="." method="_on_go_into_upstairs_bathroom_trigger_exited"]

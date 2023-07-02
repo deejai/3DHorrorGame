@@ -12,9 +12,14 @@ config_version=5
 
 config/name="3DCornProject"
 config/tags=PackedStringArray("3d")
-run/main_scene="res://Demo.tscn"
+run/main_scene="res://Views/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*res://Autoloads/AudioManager.tscn"
+Main="*res://Autoloads/Main.tscn"
 
 [filesystem]
 
