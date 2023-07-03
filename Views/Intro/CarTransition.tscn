@@ -39,6 +39,46 @@ theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[center]Made Up Studio Name[/center]"
 
+[node name="CreditMark" type="Node2D" parent="Credits"]
+visible = false
+
+[node name="Name" type="RichTextLabel" parent="Credits/CreditMark"]
+offset_top = 251.0
+offset_right = 1159.0
+offset_bottom = 647.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[center]Mark Halbmaier[/center]"
+
+[node name="Title" type="RichTextLabel" parent="Credits/CreditMark"]
+offset_top = 303.0
+offset_right = 1159.0
+offset_bottom = 647.0
+theme_override_colors/default_color = Color(0.235294, 0.235294, 0.235294, 1)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]as Richard[/center]"
+
+[node name="CreditSam" type="Node2D" parent="Credits"]
+visible = false
+
+[node name="Name" type="RichTextLabel" parent="Credits/CreditSam"]
+offset_top = 251.0
+offset_right = 1159.0
+offset_bottom = 647.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[center]Sam Grein[/center]"
+
+[node name="Title" type="RichTextLabel" parent="Credits/CreditSam"]
+offset_top = 303.0
+offset_right = 1159.0
+offset_bottom = 647.0
+theme_override_colors/default_color = Color(0.235294, 0.235294, 0.235294, 1)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]as Gemory[/center]"
+
 [node name="CreditCorndog" type="Node2D" parent="Credits"]
 visible = false
 
@@ -79,26 +119,6 @@ theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "[center]Programming and Game Design
 [/center]"
-
-[node name="CreditSam" type="Node2D" parent="Credits"]
-visible = false
-
-[node name="Name" type="RichTextLabel" parent="Credits/CreditSam"]
-offset_top = 251.0
-offset_right = 1159.0
-offset_bottom = 647.0
-theme_override_font_sizes/normal_font_size = 36
-bbcode_enabled = true
-text = "[center]Sam Grein[/center]"
-
-[node name="Title" type="RichTextLabel" parent="Credits/CreditSam"]
-offset_top = 303.0
-offset_right = 1159.0
-offset_bottom = 647.0
-theme_override_colors/default_color = Color(0.235294, 0.235294, 0.235294, 1)
-theme_override_font_sizes/normal_font_size = 28
-bbcode_enabled = true
-text = "[center]as Richard[/center]"
 
 [node name="Credit4v" type="Node2D" parent="Credits"]
 visible = false

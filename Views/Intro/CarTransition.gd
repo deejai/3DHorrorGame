@@ -56,6 +56,10 @@ func _process(delta):
 	if time_elapsed > 5.5:
 		$CarSounds.volume_db -= 6.5 * delta
 
+func _input(event):
+	if event is InputEventMouseButton:
+		Main.transition_node.transition_to(house_scene)
+
 
 func _on_background_music_delay_start_timeout():
 	$BackgroundMusic.play()
@@ -64,7 +68,7 @@ func _on_background_music_delay_start_timeout():
 func _on_go_to_next_scene_timer_timeout():
 	if skipped:
 		return
-	
+
 	skipped = true
 
 	Main.transition_node.transition_to(house_scene)

@@ -26,3 +26,27 @@ func _on_go_into_upstairs_bathroom_trigger_entered():
 func _on_go_into_upstairs_bathroom_trigger_exited():
 	AudioManager.ambience_player.set_mode(AmbiencePlayer.Mode.WITH_BASS)
 
+
+
+func _on_callout_trigger_1_body_entered(body):
+	if body is Player:
+		$AudioStreamPlayer2.play()
+		$CalloutTrigger1.queue_free()
+
+
+func _on_callout_trigger_2_body_entered(body):
+	if body is Player:
+		$AudioStreamPlayer.play()
+		$CalloutTrigger2.queue_free()
+
+
+func _on_callout_trigger_3_body_entered(body):
+	if body is Player:
+		$AudioStreamPlayer4.play()
+		$CalloutTrigger3.queue_free()
+
+
+func _on_callout_trigger_4_body_entered(body):
+	if body is Player:
+		$AudioStreamPlayer3.play()
+		$CalloutTrigger4.queue_free()

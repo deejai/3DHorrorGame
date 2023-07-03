@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yg3adf7flbjk"]
+[gd_scene load_steps=18 format=3 uid="uid://yg3adf7flbjk"]
 
 [ext_resource type="Script" path="res://Demo.gd" id="1_l5xpl"]
 [ext_resource type="PackedScene" uid="uid://dvqwpi1w8vd1p" path="res://key.glb" id="3_5tfjs"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://sd7a7hjuj1vo" path="res://Item.tscn" id="4_b4obp"]
 [ext_resource type="PackedScene" uid="uid://cmq7svbamnbmb" path="res://Objects/House/House.tscn" id="6_vexjd"]
 [ext_resource type="PackedScene" uid="uid://duc6ds8dn87om" path="res://Triggers/TraversalTrigger.tscn" id="7_4nexw"]
+[ext_resource type="AudioStream" uid="uid://cn31t5kprmd7v" path="res://Audio/Voice/Richard/calling_out/madeline_calm2.mp3" id="7_5i3mq"]
+[ext_resource type="AudioStream" uid="uid://1nrvyaqxqdae" path="res://Audio/Voice/Richard/calling_out/maddy_calm2.mp3" id="8_6uc0b"]
+[ext_resource type="AudioStream" uid="uid://wtcecmawji6d" path="res://Audio/Voice/Richard/calling_out/madeline_sharp.mp3" id="9_766sj"]
+[ext_resource type="AudioStream" uid="uid://bmidblx7blja8" path="res://Audio/Voice/Richard/calling_out/maddy_sharp.mp3" id="10_nt6t8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybmvj"]
 sky_top_color = Color(0.133333, 0.168627, 0.215686, 1)
@@ -28,6 +32,18 @@ adjustment_enabled = true
 adjustment_brightness = 0.43
 adjustment_contrast = 1.16
 adjustment_saturation = 0.74
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_hgan6"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_wlj1n"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kwrim"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ntqpo"]
+plane = Plane(0, 0, 1, 0)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86232, -1.08413, 0.184434)
@@ -53,7 +69,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.764019, 3.0494, -0.245593)
 [node name="GoIntoUpstairsBathroomTrigger" parent="." instance=ExtResource("7_4nexw")]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -2.75134, 3.17243, -4.19056)
 
+[node name="CalloutTrigger1" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.9521)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CalloutTrigger1"]
+shape = SubResource("WorldBoundaryShape3D_hgan6")
+
+[node name="CalloutTrigger2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.1816)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CalloutTrigger2"]
+shape = SubResource("WorldBoundaryShape3D_wlj1n")
+
+[node name="CalloutTrigger3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.52928)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CalloutTrigger3"]
+shape = SubResource("WorldBoundaryShape3D_kwrim")
+
+[node name="CalloutTrigger4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.32452)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CalloutTrigger4"]
+shape = SubResource("WorldBoundaryShape3D_ntqpo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5i3mq")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6uc0b")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_766sj")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_nt6t8")
+
 [connection signal="entered" from="GoUpstairsTrigger" to="." method="_on_go_upstairs_trigger_entered"]
 [connection signal="exited" from="GoUpstairsTrigger" to="." method="_on_go_upstairs_trigger_exited"]
 [connection signal="entered" from="GoIntoUpstairsBathroomTrigger" to="." method="_on_go_into_upstairs_bathroom_trigger_entered"]
 [connection signal="exited" from="GoIntoUpstairsBathroomTrigger" to="." method="_on_go_into_upstairs_bathroom_trigger_exited"]
+[connection signal="body_entered" from="CalloutTrigger1" to="." method="_on_callout_trigger_1_body_entered"]
+[connection signal="body_entered" from="CalloutTrigger2" to="." method="_on_callout_trigger_2_body_entered"]
+[connection signal="body_entered" from="CalloutTrigger3" to="." method="_on_callout_trigger_3_body_entered"]
+[connection signal="body_entered" from="CalloutTrigger4" to="." method="_on_callout_trigger_4_body_entered"]

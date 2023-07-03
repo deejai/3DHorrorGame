@@ -8,7 +8,7 @@ var bg_start: Vector2
 var mg_start: Vector2
 var fg_start: Vector2
 
-@export var slide_vector: Vector2 = Vector2(-1.25, 0.20) * 1.15
+@export var slide_vector: Vector2 = Vector2(-1.18, 0.25)
 @export var layer_slide_multiplier: float = 2.0
 
 var dampening_factor: float = 0.0
