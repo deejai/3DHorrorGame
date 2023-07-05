@@ -4,6 +4,7 @@ extends Node3D
 
 func _ready():
 	AudioManager.ambience_player.play()
+	$Player.speed = $Player.DEFAULT_SPEED / 2.0
 
 
 func _process(delta):
@@ -27,7 +28,6 @@ func _on_go_into_upstairs_bathroom_trigger_exited():
 	AudioManager.ambience_player.set_mode(AmbiencePlayer.Mode.WITH_BASS)
 
 
-
 func _on_callout_trigger_1_body_entered(body):
 	if body is Player:
 		$AudioStreamPlayer2.play()
@@ -48,5 +48,6 @@ func _on_callout_trigger_3_body_entered(body):
 
 func _on_callout_trigger_4_body_entered(body):
 	if body is Player:
+		$Player.speed = $Player.DEFAULT_SPEED
 		$AudioStreamPlayer3.play()
 		$CalloutTrigger4.queue_free()

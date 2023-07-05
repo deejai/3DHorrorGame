@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://1i11036nn3jj"]
 
-[ext_resource type="PackedScene" uid="uid://dwd6rfbqroclv" path="res://3D_Imports/House/horror_single_family_home_v3_gutted.glb" id="1_t8o1f"]
+[ext_resource type="PackedScene" uid="uid://f304sqvqt0hk" path="res://3D_Imports/House/horror_single_family_home_v3_gutted.glb" id="1_t8o1f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_30yi2"]
 size = Vector3(4.60488, 2.38154, 0.1)
@@ -77,8 +77,6 @@ size = Vector3(0.1, 2.35093, 3.10181)
 points = PackedVector3Array(-0.75, 0, 2.15, 0.75, 0, 2.15, -0.75, 0, -2.15, 0.75, 0, -2.15, -0.75, 2.5, -2.15, 0.75, 2.5, -2.15)
 
 [node name="HouseSkeleton" type="Node3D"]
-
-[node name="horror_single_family_home_v3_gutted" parent="." instance=ExtResource("1_t8o1f")]
 
 [node name="HouseInnerDetailsStaticBodySecondFloor" type="StaticBody3D" parent="."]
 
@@ -223,3 +221,5 @@ polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5)
 transform = Transform3D(-1, -9.31764e-22, 8.74228e-08, 0, 1, 1.06581e-14, -8.74228e-08, 1.06581e-14, -1, 0, 5, -5)
 depth = 0.1
 polygon = PackedVector2Array(-5, -5, -5, 0, 5, 0, 5, -5)
+
+[node name="horror_single_family_home_v3_gutted" parent="." instance=ExtResource("1_t8o1f")]

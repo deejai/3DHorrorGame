@@ -21,6 +21,10 @@ config/icon="res://icon.svg"
 AudioManager="*res://Autoloads/AudioManager.tscn"
 Main="*res://Autoloads/Main.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [filesystem]
 
 import/blender/enabled=false

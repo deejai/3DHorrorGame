@@ -7,6 +7,7 @@
 script = ExtResource("1_ljhjx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 50
 
 [node name="TransitionNode" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("2_mn5k2")

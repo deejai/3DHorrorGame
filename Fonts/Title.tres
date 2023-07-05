@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bcalxd86w8w3e"]
+
+[ext_resource type="FontFile" uid="uid://bmmggcgol6vws" path="res://Fonts/CormorantGaramond-SemiBold.ttf" id="1_7e4ri"]
+
+[resource]
+default_font = ExtResource("1_7e4ri")

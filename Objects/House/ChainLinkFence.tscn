@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://iyuog5gvn4l7"]
+
+[ext_resource type="Shader" path="res://Shaders/ChainLinkFence.gdshader" id="1_7sspk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fgeky"]
+load_path = "res://.godot/imported/horror_single_family_home_yard_fence_Combined-FenceBake_Plane_003_OPACITY.png-9e7b5dc9c4d34b2b9d798d1e58a7f505.s3tc.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ydsap"]
+resource_name = "Chicken wire"
+render_priority = 0
+shader = ExtResource("1_7sspk")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/use_draw_range = null
+shader_parameter/draw_range_start = null
+shader_parameter/draw_range_end = null
+shader_parameter/texture_albedo = SubResource("CompressedTexture2D_fgeky")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0olro"]
+_surfaces = [{
+"aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
+"format": 4097,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Chicken wire",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_62bht"]
+resource_name = "horror_single_family_home_yard_Plane_001"
+_surfaces = [{
+"aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 4119,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("ShaderMaterial_ydsap"),
+"name": "Chicken wire",
+"primitive": 3,
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0olro")
+
+[node name="ChainLinkFence" type="Node3D"]
+
+[node name="Plane_003" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.645, 0)
+mesh = SubResource("ArrayMesh_62bht")
+skeleton = NodePath("")

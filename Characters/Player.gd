@@ -10,7 +10,8 @@ var camera_dist: float = camera_dist_first
 
 @onready var pause_menu: PauseMenu = $PauseMenu
 
-const SPEED = 2.5
+const DEFAULT_SPEED: float = 2.5
+var speed = 2.5
 const JUMP_VELOCITY = 4.5
 const mouse_sens: float = 1.0
 
@@ -57,11 +58,11 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
 
