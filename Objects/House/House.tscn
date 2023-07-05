@@ -12,11 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bo50qe0bn4mp5" path="res://Objects/House/Yard.tscn" id="12_c3s4f"]
 [ext_resource type="PackedScene" uid="uid://iyuog5gvn4l7" path="res://Objects/House/ChainLinkFence.tscn" id="13_waxgl"]
 [ext_resource type="Shader" path="res://Shaders/ChainLinkFence.gdshader" id="14_sw1nx"]
+[ext_resource type="Texture2D" uid="uid://dnq207j0cpav7" path="res://Textures/horror_single_family_home_yard_fence_Combined-FenceBake_Plane_003_OPACITY.png" id="15_115ok"]
 [ext_resource type="PackedScene" uid="uid://bxj8qaoh6m6jn" path="res://Objects/Windows/LargeWindow.tscn" id="21_jd762"]
 [ext_resource type="PackedScene" uid="uid://cf02ep2j8prlo" path="res://Objects/Windows/KitchenWindow.tscn" id="22_w8qd6"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fgeky"]
-load_path = "res://.godot/imported/horror_single_family_home_yard_fence_Combined-FenceBake_Plane_003_OPACITY.png-9e7b5dc9c4d34b2b9d798d1e58a7f505.s3tc.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xn8vj"]
 resource_name = "Chicken wire"
@@ -26,7 +24,7 @@ shader_parameter/albedo = Color(1, 1, 1, 1)
 shader_parameter/use_draw_range = true
 shader_parameter/draw_range_start = 0.461
 shader_parameter/draw_range_end = 1.0
-shader_parameter/texture_albedo = SubResource("CompressedTexture2D_fgeky")
+shader_parameter/texture_albedo = ExtResource("15_115ok")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x14f4"]
 _surfaces = [{
@@ -66,7 +64,7 @@ shader_parameter/albedo = Color(1, 1, 1, 1)
 shader_parameter/use_draw_range = true
 shader_parameter/draw_range_start = 0.0
 shader_parameter/draw_range_end = 0.11
-shader_parameter/texture_albedo = SubResource("CompressedTexture2D_fgeky")
+shader_parameter/texture_albedo = ExtResource("15_115ok")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_eh87i"]
 _surfaces = [{

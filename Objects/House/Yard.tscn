@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://bo50qe0bn4mp5"]
+[gd_scene load_steps=2 format=3 uid="uid://bo50qe0bn4mp5"]
+
+[ext_resource type="PackedScene" uid="uid://dgi4abmuddo6e" path="res://3D_Imports/Yard/horror_single_family_home_yard.glb" id="1_3jwl4"]
 
 [node name="Yard" type="Node3D"]
+
+[node name="horror_single_family_home_yard" parent="." instance=ExtResource("1_3jwl4")]
