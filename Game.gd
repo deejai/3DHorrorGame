@@ -1,10 +1,17 @@
 extends Node3D
 
 #@onready var front_door_skeleton: Skeleton3D = $front_door_handle_fixed_bone/Armature/Skeleton3D
+class_name Game
+
+@onready var player: Player = $Player
 
 func _ready():
 	AudioManager.ambience_player.play()
-	$Player.speed = $Player.DEFAULT_SPEED / 2.0
+	
+	if Main.debug:
+		player.speed = 8.0
+	else:
+		player.speed = player.DEFAULT_SPEED / 2.0
 
 
 func _process(delta):
@@ -48,6 +55,11 @@ func _on_callout_trigger_3_body_entered(body):
 
 func _on_callout_trigger_4_body_entered(body):
 	if body is Player:
-		$Player.speed = $Player.DEFAULT_SPEED
+		player.speed = player.DEFAULT_SPEED
 		$AudioStreamPlayer3.play()
 		$CalloutTrigger4.queue_free()
+
+
+func _on_first_encounter_trigger_body_entered(body):
+	if body is Player:
+		$FirstEncounterTrigger/AudioStreamPlayer.play()

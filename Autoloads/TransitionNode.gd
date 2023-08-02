@@ -55,7 +55,18 @@ func _on_transition_timer_pre_timeout():
 
 func _on_transition_timer_wait_timeout():
 	fade = Fade.IN
-	get_tree().change_scene_to_packed(transition_scene)
+
+	var root = get_tree().root
+	var current_scene = get_tree().current_scene
+	var new_scene = transition_scene.instantiate()
+	if new_scene is Game:
+		Main.game = new_scene
+		print("WAAOW")
+
+	current_scene.queue_free()
+	root.add_child(new_scene)
+	get_tree().current_scene = new_scene
+
 	transition_timer_post.wait_time = transition_time / 3.0
 	transition_timer_post.start()
 

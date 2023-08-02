@@ -14,12 +14,17 @@ var in_motion: bool = false
 
 @export var open_progress: float = 0.0
 
-# Called when the node enters the scene tree for the first time.
+var being_traversed_by_npc: bool = false
+
 func _ready():
 	update_door_angle()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if being_traversed_by_npc:
+		state = State.OPENED
+		if open_progress < 1.0:
+			in_motion = true
+
 	if in_motion:
 		match state:
 			State.OPENED:

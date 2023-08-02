@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqolet4xway14"]
 
-[ext_resource type="Script" path="res://Objects/Monster.gd" id="1_iqp43"]
-[ext_resource type="Shader" path="res://Objects/SmokeMonster.gdshader" id="2_hqese"]
-[ext_resource type="PackedScene" uid="uid://cy7p7i8rm4yfy" path="res://3D_Imports/monster6_final (1).glb" id="2_i03sw"]
+[ext_resource type="Script" path="res://Objects/MonsterShaderTest.gd" id="1_daflb"]
+[ext_resource type="PackedScene" uid="uid://cy7p7i8rm4yfy" path="res://3D_Imports/monster6_final (1).glb" id="2_ulku8"]
+[ext_resource type="Shader" path="res://Objects/SmokeMonster.gdshader" id="3_t8b32"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qbbmw"]
 render_priority = 0
-shader = ExtResource("2_hqese")
+shader = ExtResource("3_t8b32")
 shader_parameter/scale = 1.0
 shader_parameter/tex_speed = Vector3(0, -2.2, 0.5)
 shader_parameter/mokomoko = Vector2(0.1, 0.1)
@@ -35,9 +35,9 @@ blend_shape_mode = 0
 
 [node name="Monster" type="Node3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-script = ExtResource("1_iqp43")
+script = ExtResource("1_daflb")
 
-[node name="ImportedScene" parent="." instance=ExtResource("2_i03sw")]
+[node name="ImportedScene" parent="." instance=ExtResource("2_ulku8")]
 
 [node name="Cube_001" parent="ImportedScene/Armature/Skeleton3D" index="0"]
 mesh = SubResource("ArrayMesh_vjqke")

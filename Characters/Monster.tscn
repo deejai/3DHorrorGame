@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://bxh1q3s6o38rj"]
+[gd_scene load_steps=4 format=3 uid="uid://bxh1q3s6o38rj"]
 
-[node name="Monster" type="Node3D"]
+[ext_resource type="Texture2D" uid="uid://bckpc721x6p4b" path="res://Images/placeholder/monster.png" id="1_ft6em"]
+[ext_resource type="Script" path="res://Characters/Monster.gd" id="1_luoyb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eyoxt"]
+radius = 0.117543
+height = 0.808124
+
+[node name="Monster" type="CharacterBody3D"]
+script = ExtResource("1_luoyb")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+offset = Vector2(0, 63.885)
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_ft6em")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.1
+target_desired_distance = 0.1
+
+[node name="NavTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.353364, 0)
+shape = SubResource("CapsuleShape3D_eyoxt")
+
+[connection signal="link_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_link_reached"]
+[connection signal="timeout" from="NavTimer" to="." method="_on_nav_timer_timeout"]

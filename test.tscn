@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1rb77i1q3kku"]
+
+[ext_resource type="Material" uid="uid://ca0bypb6rjcqw" path="res://Materials/House/VerticalBrownWood.tres" id="1_xbg7q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ros1g"]
+size = Vector3(50, 0.1, 50)
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_4u528"]
+material = ExtResource("1_xbg7q")
+shape = 0
+sections = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16v7o"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4fey8"]
+radius = 0.35
+height = 1.8
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SoftBody3D" type="SoftBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.818411, -0.574634, 0, 0.574634, 0.818411, 0, 1.92071, 0)
+
+[node name="PhysicalBone3D" type="PhysicalBone3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.929249, 0.369455, 0, -0.369455, 0.929249, 0, 1.06528, 2.93747)
+
+[node name="RigidBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_ros1g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.906782, -0.119454, -0.404324, -0.420044, 0.338318, 0.842083, 0.0362002, 0.933419, -0.356956, 0.188098, 8.23977, 20.8481)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.874806, 0, -0.484474, 0, 1, 0, 0.484474, 0, -0.874806, 0, 0.848341, 0)
+
+[node name="SoftBody3D" type="SoftBody3D" parent="Node3D"]
+transform = Transform3D(0.0178222, 0.999179, -0.0363895, -0.802468, -0.0074162, -0.596648, -0.596428, 0.0398352, 0.801677, 0.0283858, 0.281079, -0.570088)
+mesh = SubResource("RibbonTrailMesh_4u528")
+pinned_points = [4, 8, 6, 2, 0]
+attachments/0/point_index = 4
+attachments/0/spatial_attachment_path = NodePath("")
+attachments/0/offset = Vector3(0, 0, 0)
+attachments/1/point_index = 8
+attachments/1/spatial_attachment_path = NodePath("")
+attachments/1/offset = Vector3(0, 0, 0)
+attachments/2/point_index = 6
+attachments/2/spatial_attachment_path = NodePath("")
+attachments/2/offset = Vector3(0, 0, 0)
+attachments/3/point_index = 2
+attachments/3/spatial_attachment_path = NodePath("")
+attachments/3/offset = Vector3(0, 0, 0)
+attachments/4/point_index = 0
+attachments/4/spatial_attachment_path = NodePath("")
+attachments/4/offset = Vector3(0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
+shape = SubResource("CapsuleShape3D_16v7o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0304888, 0)
+mesh = SubResource("CapsuleMesh_4fey8")

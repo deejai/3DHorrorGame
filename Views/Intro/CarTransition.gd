@@ -2,7 +2,7 @@ extends Node2D
 
 var time_elapsed: float = 0.0
 
-var house_scene: PackedScene = preload("res://Demo.tscn")
+var house_scene: PackedScene = preload("res://Game.tscn")
 enum TextFade {OUT, IN, WAIT}
 var text_fade: TextFade = TextFade.WAIT
 var text_fade_wait_timer: float = 1.5

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj88udqk7w8g1"]
+
+[ext_resource type="Script" path="res://Objects/Doors/DoorNavLink.gd" id="1_fuma0"]
+
+[node name="DoorNavLink" type="NavigationLink3D"]
+start_position = Vector3(0, 0.4, 1.5)
+end_position = Vector3(0, 0.4, -1.5)
+enter_cost = 1.0
+travel_cost = 2.0
+script = ExtResource("1_fuma0")
