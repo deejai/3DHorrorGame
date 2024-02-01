@@ -6,8 +6,11 @@ var is_traversing_door: bool = false
 var door_assembly_being_traversed: DoorAssembly = null
 var door_traversal_points: Array[Vector3]
 
+@onready var animation_player: AnimationPlayer = $ladymonstermodel/AnimationPlayer
+
 func _ready():
-	pass
+	animation_player.current_animation = "Action"
+	animation_player.autoplay
 
 
 func _process(delta):
@@ -34,6 +37,11 @@ func _physics_process(delta):
 			velocity = Vector3.ZERO
 	else:
 		velocity = global_position.direction_to(nav_agent.get_next_path_position()) * 1.0
+
+	if velocity.length() > 0:
+		var target_rotation = atan2(velocity.x, velocity.z)
+		$ladymonstermodel.rotation.y = lerp_angle($ladymonstermodel.rotation.y, target_rotation, 1.0 * delta)
+
 	move_and_slide()
 
 

@@ -29,11 +29,12 @@ shader_parameter/texture_albedo = ExtResource("15_115ok")
 [sub_resource type="ArrayMesh" id="ArrayMesh_x14f4"]
 _surfaces = [{
 "aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
-"format": 4097,
+"format": 34359742465,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
 "name": "Chicken wire",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
 "vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191)
 }]
@@ -44,14 +45,15 @@ resource_name = "horror_single_family_home_yard_Plane_001"
 _surfaces = [{
 "aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
 "attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0),
-"format": 4119,
+"format": 34359742487,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
 "material": SubResource("ShaderMaterial_xn8vj"),
 "name": "Chicken wire",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128)
+"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128)
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x14f4")
@@ -69,11 +71,12 @@ shader_parameter/texture_albedo = ExtResource("15_115ok")
 [sub_resource type="ArrayMesh" id="ArrayMesh_eh87i"]
 _surfaces = [{
 "aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
-"format": 4097,
+"format": 34359742465,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
 "name": "Chicken wire",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
 "vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191)
 }]
@@ -84,14 +87,15 @@ resource_name = "horror_single_family_home_yard_Plane_001"
 _surfaces = [{
 "aabb": AABB(-6.67572e-06, -0.642191, -0.604558, 1e-05, 1.20001, 1.20001),
 "attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0),
-"format": 4119,
+"format": 34359742487,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
 "material": SubResource("ShaderMaterial_yqpmm"),
 "name": "Chicken wire",
 "primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128)
+"vertex_data": PackedByteArray(0, 0, 224, 182, 146, 204, 14, 63, 232, 110, 24, 63, 0, 0, 224, 182, 161, 102, 36, 191, 232, 110, 24, 63, 0, 0, 224, 182, 146, 204, 14, 63, 80, 196, 26, 191, 0, 0, 224, 182, 161, 102, 36, 191, 80, 196, 26, 191, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128)
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eh87i")
