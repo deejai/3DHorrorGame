@@ -17,37 +17,37 @@ var in_motion: bool = false
 var being_traversed_by_npc: bool = false
 
 func _ready():
-	update_door_angle()
+    update_door_angle()
 
 func _process(delta):
-	if being_traversed_by_npc:
-		state = State.OPENED
-		if open_progress < 1.0:
-			in_motion = true
+    if being_traversed_by_npc:
+        state = State.OPENED
+        if open_progress < 1.0:
+            in_motion = true
 
-	if in_motion:
-		match state:
-			State.OPENED:
-				var updated_progress: float = lerp(open_progress, 1.0, 1-pow(0.05, delta))
-				if open_progress > .995:
-					open_progress = 1.0
-					in_motion = false
-				else:
-					open_progress = updated_progress
+    if in_motion:
+        match state:
+            State.OPENED:
+                var updated_progress: float = lerp(open_progress, 1.0, 1-pow(0.05, delta))
+                if open_progress > .995:
+                    open_progress = 1.0
+                    in_motion = false
+                else:
+                    open_progress = updated_progress
 
-			State.CLOSED:
-				var updated_progress: float = lerp(open_progress, 0.0, 1-pow(0.05, delta))
-				if open_progress < 0.005:
-					open_progress = 0.0
-					in_motion = false
-				else:
-					open_progress = updated_progress
+            State.CLOSED:
+                var updated_progress: float = lerp(open_progress, 0.0, 1-pow(0.05, delta))
+                if open_progress < 0.005:
+                    open_progress = 0.0
+                    in_motion = false
+                else:
+                    open_progress = updated_progress
 
-		update_door_angle()
+        update_door_angle()
 
 func openclose():
-	in_motion = true
-	state = State.OPENED if state == State.CLOSED else State.CLOSED
+    in_motion = true
+    state = State.OPENED if state == State.CLOSED else State.CLOSED
 
 func update_door_angle():
-	door_node.rotation.y = closed_angle + open_angle_diff * open_progress
+    door_node.rotation.y = closed_angle + open_angle_diff * open_progress

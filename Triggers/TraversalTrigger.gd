@@ -6,19 +6,19 @@ signal entered
 signal exited
 
 func _ready():
-	pass
+    pass
 
 func _process(delta):
-	pass
+    pass
 
 func _on_area_3d_body_entered(body):
-	if body is Player:
-		var to_player = body.position - position
-		if to_player.dot(basis.z) > 0:
-			emit_signal("entered")
+    if body is Player:
+        var to_player = body.position - position
+        if to_player.dot(basis.z) > 0:
+            emit_signal("entered")
 
 func _on_area_3d_body_exited(body):
-	if body is Player:
-		var to_player = body.position - position
-		if to_player.dot(basis.z) > 0:
-			emit_signal("exited")
+    if body is Player:
+        var to_player = body.position - position
+        if to_player.dot(basis.z) > 0:
+            emit_signal("exited")

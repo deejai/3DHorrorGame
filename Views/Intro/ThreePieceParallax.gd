@@ -15,15 +15,15 @@ var dampening_factor: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	bg_start = bg_sprite.position
-	mg_start = mg_sprite.position
-	fg_start = fg_sprite.position
+    bg_start = bg_sprite.position
+    mg_start = mg_sprite.position
+    fg_start = fg_sprite.position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	dampening_factor += delta * 0.03
+    dampening_factor += delta * 0.03
 
-	bg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector
-	mg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector * layer_slide_multiplier
-	fg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector * layer_slide_multiplier * layer_slide_multiplier
+    bg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector
+    mg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector * layer_slide_multiplier
+    fg_sprite.position += delta * (1.0 - dampening_factor) * slide_vector * layer_slide_multiplier * layer_slide_multiplier

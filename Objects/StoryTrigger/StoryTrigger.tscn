@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjtgh62oiwgow"]
+
+[ext_resource type="Texture2D" uid="uid://dd3aocm1w4efl" path="res://Images/placeholder/polaroid_front.png" id="1_n4ii0"]
+[ext_resource type="Texture2D" uid="uid://bwlnwnscxkdxv" path="res://Images/placeholder/polaroid_back.png" id="2_vgxtp"]
+[ext_resource type="Script" path="res://GlobalClasses/InteractiveArea.gd" id="3_2cxrn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jca3i"]
+albedo_texture = ExtResource("1_n4ii0")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ad38"]
+lightmap_size_hint = Vector2i(3, 4)
+material = SubResource("StandardMaterial3D_jca3i")
+size = Vector2(0.35, 0.42)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjiud"]
+albedo_texture = ExtResource("2_vgxtp")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4ttcc"]
+lightmap_size_hint = Vector2i(3, 4)
+material = SubResource("StandardMaterial3D_kjiud")
+size = Vector2(0.35, 0.42)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e1lvr"]
+size = Vector3(0.395, 0.108565, 0.445)
+
+[node name="StoryTrigger" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="MeshInstance3DFront" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_1ad38")
+
+[node name="MeshInstance3DBack" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4ttcc")
+skeleton = NodePath("../MeshInstance3DFront")
+
+[node name="InteractiveArea" type="Area3D" parent="."]
+monitoring = false
+script = ExtResource("3_2cxrn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractiveArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0392828, 0)
+shape = SubResource("BoxShape3D_e1lvr")

@@ -7,8 +7,8 @@ extends Node
 var game
 
 func _ready():
-	pass
+    pass
 
 
 func _process(delta):
-	pass
+    pass

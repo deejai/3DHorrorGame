@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmq7svbamnbmb"]
+[gd_scene load_steps=23 format=3 uid="uid://cmq7svbamnbmb"]
 
 [ext_resource type="PackedScene" uid="uid://bhv80poq00vn6" path="res://Objects/Doors/FrontDoor.tscn" id="4_ojgth"]
 [ext_resource type="PackedScene" uid="uid://dwxgq54exfs8d" path="res://Objects/Doors/CommonInsideDoor.tscn" id="5_3x514"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://iyuog5gvn4l7" path="res://Objects/House/ChainLinkFence.tscn" id="13_waxgl"]
 [ext_resource type="Shader" path="res://Shaders/ChainLinkFence.gdshader" id="14_sw1nx"]
 [ext_resource type="Texture2D" uid="uid://dnq207j0cpav7" path="res://Textures/horror_single_family_home_yard_fence_Combined-FenceBake_Plane_003_OPACITY.png" id="15_115ok"]
+[ext_resource type="PackedScene" uid="uid://cjtgh62oiwgow" path="res://Objects/StoryTrigger/StoryTrigger.tscn" id="16_qokf7"]
 [ext_resource type="PackedScene" uid="uid://bxj8qaoh6m6jn" path="res://Objects/Windows/LargeWindow.tscn" id="21_jd762"]
 [ext_resource type="PackedScene" uid="uid://cf02ep2j8prlo" path="res://Objects/Windows/KitchenWindow.tscn" id="22_w8qd6"]
 
@@ -398,3 +399,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01508, 0, 3.66224)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.645, 0)
 mesh = SubResource("ArrayMesh_6hwp0")
 skeleton = NodePath("")
+
+[node name="StoryTriggers" type="Node3D" parent="."]
+
+[node name="HubWifeDancing" parent="StoryTriggers" instance=ExtResource("16_qokf7")]

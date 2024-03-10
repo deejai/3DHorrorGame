@@ -188,6 +188,7 @@ mesh = SubResource("BoxMesh_l8qc2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00140288, 1.06079, -0.401894)
 collision_layer = 4
 collision_mask = 4
+monitoring = false
 script = ExtResource("4_sv2xm")
 door_assembly = NodePath("../../../../..")
 

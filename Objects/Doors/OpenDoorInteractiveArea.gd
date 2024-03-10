@@ -3,4 +3,4 @@ extends InteractiveArea
 @export var door_assembly: DoorAssembly
 
 func interact():
-	door_assembly.openclose()
+    door_assembly.openclose()

@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 AudioManager="*res://Autoloads/AudioManager.tscn"
 Main="*res://Autoloads/Main.tscn"
 ProgressTracker="*res://Autoloads/ProgressTracker.gd"
+Globals="*res://Autoloads/Globals.gd"
 
 [display]
 

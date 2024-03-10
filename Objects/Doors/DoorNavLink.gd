@@ -6,5 +6,5 @@ class_name DoorNavLink
 @export var door_assembly: DoorAssembly = null
 
 func _ready():
-	if door_assembly == null:
-		printerr("Door assembly for door nav link with description '%s' not set" % description)
+    if door_assembly == null:
+        printerr("Door assembly for door nav link with description '%s' not set" % description)
