@@ -11,7 +11,7 @@ uniform vec4 smoke_color : source_color = vec4( 0.185, 0.185, 0.185, 1.0 );
 
 varying vec4 world_vertex;
 
-float random( vec3 pos ) { 
+float random( vec3 pos ) {
 	return fract(sin(dot(pos, vec3(12.9898,78.233,-3.532532))) * 43758.5453);
 }
 

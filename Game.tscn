@@ -134,6 +134,33 @@ navigation_mesh = SubResource("NavigationMesh_ilw1a")
 
 [node name="House" parent="NavigationRegion3D" instance=ExtResource("5_ciqrb")]
 
+[node name="FrontDoor" parent="NavigationRegion3D/House" index="4" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("front_door_handle_fixed/front_door/DoorFrame/Door")
+
+[node name="CommonInsideDoorBathroomFirstFloor" parent="NavigationRegion3D/House" index="5" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
+
+[node name="CommonInsideDoorMasterBedroom" parent="NavigationRegion3D/House" index="6" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
+
+[node name="CommonInsideDoorSecondFloorBathroom" parent="NavigationRegion3D/House" index="7" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
+
+[node name="CommonInsideDoorKidsRoom" parent="NavigationRegion3D/House" index="8" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
+
+[node name="CommonInsideDoorOffice" parent="NavigationRegion3D/House" index="9" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
+
+[node name="GlassWindowDoor" parent="NavigationRegion3D/House" index="10" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("kitchen_door/kitchen_outside_doorgroup/DoorFrame_002/Door_002")
+
+[node name="HarryPotterClosetDoor" parent="NavigationRegion3D/House" index="19" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("closet_door/harrypotter_doorgroup/DoorFrame_005/Door_005")
+
+[node name="LaundryRoomDoor" parent="NavigationRegion3D/House" index="20" node_paths=PackedStringArray("door_node")]
+door_node = NodePath("closet_door/harrypotter_doorgroup/DoorFrame_005/Door_005")
+
 [node name="DoorNavLinkFrontDoor" parent="." node_paths=PackedStringArray("door_assembly") instance=ExtResource("13_1alk4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 4.9366)
 description = "Front Door"

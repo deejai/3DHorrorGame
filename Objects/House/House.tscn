@@ -115,26 +115,33 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.02, 0, -1, 0, -4.37114e-08, 5.0
 [node name="KitchenWindow" parent="." instance=ExtResource("22_w8qd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.228804, 1.50742, -4.95755)
 
-[node name="FrontDoor" parent="." instance=ExtResource("4_ojgth")]
+[node name="FrontDoor" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("4_ojgth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0321494, 0, 4.94632)
+door_node = NodePath("front_door_handle_fixed/front_door/DoorFrame/Door")
 
-[node name="CommonInsideDoorBathroomFirstFloor" parent="." instance=ExtResource("5_3x514")]
+[node name="CommonInsideDoorBathroomFirstFloor" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("5_3x514")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.51995, 0, 3.21732)
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
-[node name="CommonInsideDoorMasterBedroom" parent="." instance=ExtResource("5_3x514")]
+[node name="CommonInsideDoorMasterBedroom" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("5_3x514")]
 transform = Transform3D(-0.706823, 0, -0.707391, 0, 1, 0, 0.707391, 0, -0.706823, 0.270811, 2.49832, -1.56956)
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
-[node name="CommonInsideDoorSecondFloorBathroom" parent="." instance=ExtResource("5_3x514")]
+[node name="CommonInsideDoorSecondFloorBathroom" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("5_3x514")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.41001, 2.49644, -4.07763)
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
-[node name="CommonInsideDoorKidsRoom" parent="." instance=ExtResource("5_3x514")]
+[node name="CommonInsideDoorKidsRoom" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("5_3x514")]
 transform = Transform3D(-0.67163, 0, 0.740887, 0, 1, 0, -0.740887, 0, -0.67163, -2.00474, 2.4939, -1.49625)
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
-[node name="CommonInsideDoorOffice" parent="." instance=ExtResource("5_3x514")]
+[node name="CommonInsideDoorOffice" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("5_3x514")]
 transform = Transform3D(0.000733066, 0, -1, 0, 1, 0, 1, 0, 0.000733066, 0.638, 2.498, -3.492)
+door_node = NodePath("common_inside_door/downstairs_bathroom_door/DoorFrame_004/Door_004")
 
-[node name="GlassWindowDoor" parent="." instance=ExtResource("6_usj28")]
+[node name="GlassWindowDoor" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("6_usj28")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.91599, 0, -3.61671)
+door_node = NodePath("kitchen_door/kitchen_outside_doorgroup/DoorFrame_002/Door_002")
 
 [node name="MediumWindow1" parent="." instance=ExtResource("7_7ajf1")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.21057, 3.81396, 4.97059)
@@ -160,11 +167,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, -1.52855e-14, 1, 1.74846e-07, 8.742
 [node name="LargeWindowWithBlinds" parent="." instance=ExtResource("10_caefy")]
 transform = Transform3D(0.99, 0, 0, 0, 1, 0, 0, 0, 0.8, -0.82364, 3.8225, -4.95811)
 
-[node name="HarryPotterClosetDoor" parent="." instance=ExtResource("11_3njli")]
+[node name="HarryPotterClosetDoor" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("11_3njli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194214, 0, -1.56447)
+door_node = NodePath("closet_door/harrypotter_doorgroup/DoorFrame_005/Door_005")
 
-[node name="LaundryRoomDoor" parent="." instance=ExtResource("11_3njli")]
+[node name="LaundryRoomDoor" parent="." node_paths=PackedStringArray("door_node") instance=ExtResource("11_3njli")]
 transform = Transform3D(0.0173652, 0, 0.999849, 0, 1, 0, -0.999849, 0, 0.0173652, -2.34075, 0, -2.19975)
+door_node = NodePath("closet_door/harrypotter_doorgroup/DoorFrame_005/Door_005")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.713791, 0.507123, -1.88955)
