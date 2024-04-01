@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://drrvhaqiykbog" path="res://Objects/Doors/ClosetDoor.tscn" id="11_3njli"]
 [ext_resource type="PackedScene" uid="uid://1i11036nn3jj" path="res://Objects/House/HouseSkeleton.tscn" id="11_hhn7d"]
 [ext_resource type="PackedScene" uid="uid://bo50qe0bn4mp5" path="res://Objects/House/Yard.tscn" id="12_c3s4f"]
-[ext_resource type="PackedScene" uid="uid://me3iosg6ore5" path="res://Objects/HouseholdObjects/tub.tscn" id="12_fjfqv"]
 [ext_resource type="PackedScene" uid="uid://iyuog5gvn4l7" path="res://Objects/House/ChainLinkFence.tscn" id="13_waxgl"]
 [ext_resource type="Shader" path="res://Shaders/ChainLinkFence.gdshader" id="14_sw1nx"]
 [ext_resource type="Texture2D" uid="uid://dnq207j0cpav7" path="res://Textures/horror_single_family_home_yard_fence_Combined-FenceBake_Plane_003_OPACITY.png" id="15_115ok"]
@@ -201,9 +200,6 @@ light_size = 0.528
 transform = Transform3D(0.352477, -0.843466, 0.405372, 0.107642, 0.46684, 0.877767, -0.929609, -0.265757, 0.255342, 0, 8.48774, 0)
 
 [node name="HouseSkeleton" parent="." instance=ExtResource("11_hhn7d")]
-
-[node name="Tub" parent="HouseSkeleton" instance=ExtResource("12_fjfqv")]
-transform = Transform3D(0.338, 0, 0, 0, 0.338, 0, 0, 0, 0.338, -3.34086, -1.19209e-07, 0.681938)
 
 [node name="Yard" parent="." instance=ExtResource("12_c3s4f")]
 
