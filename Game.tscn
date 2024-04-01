@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dvqwpi1w8vd1p" path="res://key.glb" id="3_he3ev"]
 [ext_resource type="PackedScene" uid="uid://sd7a7hjuj1vo" path="res://Item.tscn" id="4_mgcwi"]
 [ext_resource type="PackedScene" uid="uid://cmq7svbamnbmb" path="res://Objects/House/House.tscn" id="5_ciqrb"]
-[ext_resource type="PackedScene" uid="uid://duc6ds8dn87om" path="res://Triggers/TraversalTrigger.tscn" id="6_qn32u"]
+[ext_resource type="PackedScene" uid="uid://duc6ds8dn87om" path="res://Triggers/TraversalTrigger/TraversalTrigger.tscn" id="6_qn32u"]
 [ext_resource type="AudioStream" uid="uid://cn31t5kprmd7v" path="res://Audio/Voice/Richard/calling_out/madeline_calm2.mp3" id="7_hepvd"]
 [ext_resource type="AudioStream" uid="uid://1nrvyaqxqdae" path="res://Audio/Voice/Richard/calling_out/maddy_calm2.mp3" id="8_3ia8j"]
 [ext_resource type="AudioStream" uid="uid://wtcecmawji6d" path="res://Audio/Voice/Richard/calling_out/madeline_sharp.mp3" id="9_yb33p"]

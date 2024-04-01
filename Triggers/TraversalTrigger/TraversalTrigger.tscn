@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://duc6ds8dn87om"]
 
-[ext_resource type="Script" path="res://Triggers/TraversalTrigger.gd" id="1_fmgcw"]
+[ext_resource type="Script" path="res://Triggers/TraversalTrigger/TraversalTrigger.gd" id="1_fmgcw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_knbqn"]
 size = Vector3(1.4, 2, 0.3)

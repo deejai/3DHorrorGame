@@ -7,4 +7,7 @@ func _ready():
     collision_layer |= Globals.COLLISION_MASK_INTERACTIVE
 
 func interact():
-    printerr("Tried to interact, but no interaction set")
+    if get_parent().has_method("interact"):
+        get_parent().interact()
+    else:
+        printerr("Tried to interact, but no interaction set")
