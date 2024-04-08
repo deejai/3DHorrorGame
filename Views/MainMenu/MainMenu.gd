@@ -5,16 +5,16 @@ var game_scene: PackedScene = preload("res://Game.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-    pass
+	pass
 
 
 func _on_button_pressed():
-    if Main.debug:
-        Main.transition_node.transition_to(game_scene)
-    else:
-        Main.transition_node.transition_to(intro_scene)
+	if Main.debug:
+		Main.transition_node.transition_to(game_scene)
+	else:
+		Main.transition_node.transition_to(intro_scene)

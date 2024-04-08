@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://br3xl13e1idpi"
+path.s3tc="res://.godot/imported/bathroomfaucetcabinet_86_white wood grain texture-seamless Natural Oak.jpg-d6a2c477f9592ec9a24eb4ed20d4d8f5.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "9de32ee068d10e952da26dea55c9fd66"
+}
+
+[deps]
+
+source_file="res://3D_Imports/HouseholdObjects/textures/bathroomfaucetcabinet_86_white wood grain texture-seamless Natural Oak.jpg"
+dest_files=["res://.godot/imported/bathroomfaucetcabinet_86_white wood grain texture-seamless Natural Oak.jpg-d6a2c477f9592ec9a24eb4ed20d4d8f5.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
