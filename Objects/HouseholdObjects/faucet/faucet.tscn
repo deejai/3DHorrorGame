@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bghoa22sgeey2"]
+
+[ext_resource type="PackedScene" uid="uid://dgxy3neenmf55" path="res://3D_Imports/HouseholdObjects/faucet/faucet.glb" id="1_m7ocm"]
+
+[node name="Faucet" type="Node3D"]
+
+[node name="faucet" parent="." instance=ExtResource("1_m7ocm")]
