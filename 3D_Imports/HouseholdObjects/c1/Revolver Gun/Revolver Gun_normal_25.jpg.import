@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://djwnwj3iwm2n5"
+path.s3tc="res://.godot/imported/Revolver Gun_normal_25.jpg-d59be9c2e2dfa82e2b37d96a4987f030.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d427d2df19c4e1a70cd44c17487e0b0a"
+}
+
+[deps]
+
+source_file="res://3D_Imports/HouseholdObjects/c1/Revolver Gun/Revolver Gun_normal_25.jpg"
+dest_files=["res://.godot/imported/Revolver Gun_normal_25.jpg-d59be9c2e2dfa82e2b37d96a4987f030.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3D_Imports/HouseholdObjects/c1/Revolver Gun/Revolver Gun_normal_25.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

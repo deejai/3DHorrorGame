@@ -1,7 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://bghoa22sgeey2"]
-
-[ext_resource type="PackedScene" uid="uid://dgxy3neenmf55" path="res://3D_Imports/HouseholdObjects/faucet/faucet.glb" id="1_m7ocm"]
-
-[node name="Faucet" type="Node3D"]
-
-[node name="faucet" parent="." instance=ExtResource("1_m7ocm")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:467be7debc9eaaa2726862b5211296f058c5d6c49ff6638493974520ac964258
+size 293

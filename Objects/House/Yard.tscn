@@ -1,7 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo50qe0bn4mp5"]
-
-[ext_resource type="PackedScene" uid="uid://dgi4abmuddo6e" path="res://3D_Imports/Yard/horror_single_family_home_yard.glb" id="1_3jwl4"]
-
-[node name="Yard" type="Node3D"]
-
-[node name="horror_single_family_home_yard" parent="." instance=ExtResource("1_3jwl4")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f927b85d7f403b93990b84db1d415da8a7698a6a483a501474c1c24824c6c276
+size 320

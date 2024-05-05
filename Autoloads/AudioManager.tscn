@@ -1,32 +1,3 @@
-[gd_scene load_steps=7 format=3 uid="uid://1357udt8hgpf"]
-
-[ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_inqgr"]
-[ext_resource type="Script" path="res://Autoloads/AmbiencePlayer.gd" id="2_qtg18"]
-[ext_resource type="AudioStream" uid="uid://dccci3qmdkttg" path="res://Audio/Ambience/HORROR_AMBIENCE_stems/heavy_rumbling.mp3" id="3_a7no5"]
-[ext_resource type="AudioStream" uid="uid://dnxmmwxkba50u" path="res://Audio/Ambience/HORROR_AMBIENCE_stems/bass_line.mp3" id="4_yl5y4"]
-[ext_resource type="AudioStream" uid="uid://cxfi5ty50o80d" path="res://Audio/Ambience/HORROR_AMBIENCE_stems/eerie_synth.mp3" id="5_n6ifv"]
-[ext_resource type="AudioStream" uid="uid://6vcgypad5qqp" path="res://Audio/Ambience/HORROR_AMBIENCE_stems/spastic_whirly_sound_late_in_track.mp3" id="6_i8drx"]
-
-[node name="AudioManager" type="Node"]
-script = ExtResource("1_inqgr")
-
-[node name="AmbiencePlayer" type="Node" parent="."]
-script = ExtResource("2_qtg18")
-
-[node name="Stems" type="Node" parent="AmbiencePlayer"]
-
-[node name="HeavyRumbling" type="AudioStreamPlayer" parent="AmbiencePlayer/Stems"]
-stream = ExtResource("3_a7no5")
-volume_db = -6.0
-
-[node name="BassLine" type="AudioStreamPlayer" parent="AmbiencePlayer/Stems"]
-stream = ExtResource("4_yl5y4")
-volume_db = -6.0
-
-[node name="EerieSynth" type="AudioStreamPlayer" parent="AmbiencePlayer/Stems"]
-stream = ExtResource("5_n6ifv")
-volume_db = -6.0
-
-[node name="SpasticWhirlySoundLateInTrack" type="AudioStreamPlayer" parent="AmbiencePlayer/Stems"]
-stream = ExtResource("6_i8drx")
-volume_db = -6.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ba9052624d136afee5fc1de6b6e49944b9521dc6baf6e1fa3ca0bf63a60ab03
+size 1556

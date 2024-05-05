@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://caj2uafpgh1gg"
+path="res://.godot/imported/PBR Wooden Planks_SPECULAR.jpg-f4a99f67ad01f6b435eaee04a10c5836.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "dbc96b016793dc074bde2bf466f51553"
+}
+
+[deps]
+
+source_file="res://3D_Imports/HouseholdObjects/c1/PBR Wooden Planks/PBR Wooden Planks_SPECULAR.jpg"
+dest_files=["res://.godot/imported/PBR Wooden Planks_SPECULAR.jpg-f4a99f67ad01f6b435eaee04a10c5836.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

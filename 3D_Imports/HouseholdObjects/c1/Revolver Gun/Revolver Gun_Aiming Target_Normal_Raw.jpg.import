@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://h2xmeu5cqu3m"
+path.s3tc="res://.godot/imported/Revolver Gun_Aiming Target_Normal_Raw.jpg-96e04716d2aa10a5ed75710cf74805e6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "a95b28edf7f5085b09fe8f1171abac78"
+}
+
+[deps]
+
+source_file="res://3D_Imports/HouseholdObjects/c1/Revolver Gun/Revolver Gun_Aiming Target_Normal_Raw.jpg"
+dest_files=["res://.godot/imported/Revolver Gun_Aiming Target_Normal_Raw.jpg-96e04716d2aa10a5ed75710cf74805e6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3D_Imports/HouseholdObjects/c1/Revolver Gun/Revolver Gun_Aiming Target_Normal_Raw.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

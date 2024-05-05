@@ -1,20 +1,3 @@
-[gd_scene load_steps=4 format=3 uid="uid://sd7a7hjuj1vo"]
-
-[ext_resource type="Texture2D" uid="uid://gonmg6jkfcro" path="res://icon.svg" id="1_leb5r"]
-[ext_resource type="Script" path="res://Item.gd" id="2_n40fs"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jxn3s"]
-
-[node name="Item" type="Node3D"]
-script = ExtResource("2_n40fs")
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.302481, 0, 0, 0, 0.302481, 3.64153e-14, 0, -3.64153e-14, 0.302481, 0, 0, 0)
-texture = ExtResource("1_leb5r")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(0.302481, 0, 0, 0, 0.302481, 3.64153e-14, 0, -3.64153e-14, 0.302481, 0, 0, 0)
-collision_layer = 5
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_jxn3s")
+version https://git-lfs.github.com/spec/v1
+oid sha256:d656eef63028bbc9d78eb52eb03f662de1383d2991ef28aa3e047ddc1e5b3b28
+size 821
