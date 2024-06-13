@@ -37,27 +37,22 @@ func _on_go_into_upstairs_bathroom_trigger_exited():
 
 func _on_callout_trigger_1_body_entered(body):
     if body is Player:
-        $AudioStreamPlayer2.play()
-        $CalloutTrigger1.queue_free()
+        GameStateTracker.trigger_event(GameStateTracker.TriggeredEvent.INTRO_CALL_MADDY_1)
 
 
 func _on_callout_trigger_2_body_entered(body):
     if body is Player:
-        $AudioStreamPlayer.play()
-        $CalloutTrigger2.queue_free()
+        GameStateTracker.trigger_event(GameStateTracker.TriggeredEvent.INTRO_CALL_MADDY_2)
 
 
 func _on_callout_trigger_3_body_entered(body):
     if body is Player:
-        $AudioStreamPlayer4.play()
-        $CalloutTrigger3.queue_free()
+        GameStateTracker.trigger_event(GameStateTracker.TriggeredEvent.INTRO_CALL_MADDY_3)
 
 
 func _on_callout_trigger_4_body_entered(body):
     if body is Player:
-        player.speed = player.DEFAULT_SPEED
-        $AudioStreamPlayer3.play()
-        $CalloutTrigger4.queue_free()
+        GameStateTracker.trigger_event(GameStateTracker.TriggeredEvent.INTRO_CALL_MADDY_4)
 
 
 func _on_first_encounter_trigger_body_entered(body):
