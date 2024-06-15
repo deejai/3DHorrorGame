@@ -44,6 +44,13 @@ func _process(delta):
         else:
             print(obj)
 
+    if Input.is_action_just_pressed("ui_accept"):
+        if Main.game.ghost.active:
+            Main.game.ghost.despawn()
+        else:
+            Main.game.ghost.spawn()
+
+
 func _physics_process(delta):
     # Add the gravity.
     if not is_on_floor():

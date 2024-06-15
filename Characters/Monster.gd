@@ -5,6 +5,7 @@ extends CharacterBody3D
 var is_traversing_door: bool = false
 var door_assembly_being_traversed: DoorAssembly = null
 var door_traversal_points: Array[Vector3]
+var active = false
 
 @onready var animation_player: AnimationPlayer = $ladymonstermodel/AnimationPlayer
 
@@ -12,12 +13,13 @@ func _ready():
     animation_player.current_animation = "Action"
     animation_player.autoplay
 
-
 func _process(delta):
     pass
 
-
 func _physics_process(delta):
+    if not active:
+        return
+
     # stop traversing door and resume normal pathfinding if we made it through the door
     if is_traversing_door:
         var mypos_2d: Vector2 = Vector2(global_position.x, global_position.z)
@@ -56,3 +58,13 @@ func _on_navigation_agent_3d_link_reached(details):
         door_assembly_being_traversed = link.door_assembly
         door_assembly_being_traversed.being_traversed_by_npc = true
         door_traversal_points = [details.link_entry_position, details.link_exit_position]
+
+func despawn():
+    position.y = -10.0
+    set("axis_lock_linear_y", true)
+    active = false
+
+func spawn():
+    position.y = 0.3
+    set("axis_lock_linear_y", false)
+    active = true
