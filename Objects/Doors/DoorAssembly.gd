@@ -17,14 +17,30 @@ var in_motion: bool = false
 
 @export var open_progress: float = 0.0
 
+@export var required_key_name: String = ""
+@export var locked: bool = false
+
+const INTERACT_CD: float = 0.5
+var interact_cd: float = 0.0
+
 var being_traversed_by_npc: bool = false
 
+@export var locked_noise_player: AudioStreamPlayer = null
+@export var unlock_noise_player: AudioStreamPlayer = null
+
 func _ready():
+    if locked_noise_player == null:
+        locked_noise_player = AudioManager.get_node("MiscSFX/DoorLocked")
+    if unlock_noise_player == null:
+        unlock_noise_player = AudioManager.get_node("MiscSFX/DoorUnlocked")
+
     closed_static_collision_mask = closed_static_body.collision_mask
     closed_static_collision_layer = closed_static_body.collision_layer
     update_door_angle()
 
 func _process(delta):
+    interact_cd = max(0.0, interact_cd - delta)
+
     if being_traversed_by_npc:
         state = State.OPENED
         if open_progress < 1.0:
@@ -57,8 +73,20 @@ func _process(delta):
         update_door_angle()
 
 func openclose():
-    in_motion = true
-    state = State.OPENED if state == State.CLOSED else State.CLOSED
+    if interact_cd > 0.0:
+        return
+    else:
+        interact_cd = INTERACT_CD
+    
+    if locked and Main.game.player.use_key(required_key_name):
+        unlock_noise_player.play()
+        locked = false
+
+    if locked:
+        locked_noise_player.play()
+    else:
+        in_motion = true
+        state = State.OPENED if state == State.CLOSED else State.CLOSED
 
 func update_door_angle():
     door_node.rotation.y = closed_angle + open_angle_diff * open_progress

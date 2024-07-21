@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://5bla5hcy7cdy"
+path.s3tc="res://.godot/imported/horror_keys_1_皮革D.png-55f7ca22be5b37d23cc29c22087ecd96.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "099446734ef33a1837f89df25be08c7c"
+}
+
+[deps]
+
+source_file="res://3D_Imports/HouseholdObjects/keys_1/horror_keys_1_皮革D.png"
+dest_files=["res://.godot/imported/horror_keys_1_皮革D.png-55f7ca22be5b37d23cc29c22087ecd96.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3D_Imports/HouseholdObjects/misc/horror_keys_1_皮革D.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

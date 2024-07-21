@@ -1,4 +1,4 @@
-extends Node3D
+extends InventoryItem
 
 func interact():
     print("GRAB THE HATCHET!!!!")

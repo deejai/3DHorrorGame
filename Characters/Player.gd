@@ -9,6 +9,8 @@ var camera_dist_third: float = 1.0
 var camera_dist: float = camera_dist_first
 
 @onready var pause_menu: PauseMenu = $PauseMenu
+@onready var gui: CanvasLayer = $GUI
+@onready var inventory_display_node: Node3D = $GUI/InventoryDisplay
 
 const DEFAULT_SPEED: float = 2.5
 var speed = 2.5
@@ -24,10 +26,14 @@ var prev_position: Vector3
 
 @onready var delay_input_timer: Timer = $DelayInputTimer
 
+var inventory: Dictionary = {}
+
 func _ready():
 #	get_viewport().warp_mouse(Vector2(ProjectSettings.get("display/window/size/viewport_width")/2, ProjectSettings.get("display/window/size/viewport_height")))
     prev_position = position
     Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+    
+    inventory[$TestInventoryItem.lookup_name] = $TestInventoryItem
 
 func _process(delta):
     if !delay_input_timer.is_stopped():
@@ -40,7 +46,11 @@ func _process(delta):
         var obj = grab_ray.get_collider()
         if obj is InteractiveArea:
             print("interact!")
-            obj.interact()
+            if obj.get_parent() is InventoryItem:
+                print("Its an inventory item!!")
+                pickup_item(obj.get_parent())
+            else:
+                obj.interact()
         else:
             print(obj)
 
@@ -83,3 +93,16 @@ func _input(event):
 
         # left right body rotation
         rotation.y = rotation.y - (event.relative.x * mouse_sens * PI/1000)
+
+func use_key(name: String):
+    var key_to_use = inventory.get(name)
+    if key_to_use:
+        gui.generate_feedback("Used " + key_to_use.display_name + " to unlock")
+        inventory.erase(name)
+        return true
+    else:
+        return false
+
+func pickup_item(item: InventoryItem):
+    inventory[item.lookup_name] = item
+    item.reparent(inventory_display_node, false)
