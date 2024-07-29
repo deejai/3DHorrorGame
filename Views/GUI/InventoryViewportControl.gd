@@ -15,6 +15,12 @@ var inventory: Dictionary = {}
 
 @onready var button_prev: Button = $SubViewport/CanvasLayer/Panel/ButtonPrev
 @onready var button_next: Button = $SubViewport/CanvasLayer/Panel/ButtonNext
+@onready var item_label: Label = $SubViewport/CanvasLayer/Panel/ItemLabel
+
+var item_index = 0
+
+func _ready():
+    update_item_label()
 
 func _process(delta):
     if not visible:
@@ -40,20 +46,41 @@ func rotate_object(relative_movement: Vector2):
             object.rotate_x(relative_movement.y * sensitivity)
 
 func go_to_first_item():
+    item_index = 0
+
     if is_instance_valid(object):
         object.rotation = object.rotation_offset
 
     if Main.game.player.inventory_items.is_empty():
         object = null;
-        return
+    else:
+        object = Main.game.player.inventory_items.values()[0]
 
-    object = Main.game.player.inventory_items.values()[0]
+    update_item_label()
+    set_nextprev_buttons()
 
 func go_to_item_relative(offset: int):
     if is_instance_valid(object):
         object.rotation = object.rotation_offset
     var current_slot = Main.game.player.inventory_items.values().find(object)
-    object = Main.game.player.inventory_items.values()[(current_slot+offset) % len(Main.game.player.inventory_items.values())]
+    item_index = (current_slot+offset) % len(Main.game.player.inventory_items.values())
+    object = Main.game.player.inventory_items.values()[item_index]
+    update_item_label()
+    set_nextprev_buttons()
+
+func update_item_label():
+    if is_instance_valid(object):
+        item_label.text = object.display_name
+    else:
+        item_label.text = ""
+
+func set_nextprev_buttons():
+    if Main.game.player.inventory_items.is_empty() or not is_instance_valid(object):
+        button_prev.disabled = true
+        button_next.disabled = true
+    else:
+        button_prev.disabled = item_index == 0
+        button_next.disabled = item_index == len(Main.game.player.inventory_items) - 1
 
 func _on_button_prev_pressed():
     go_to_item_relative(-1)

@@ -122,5 +122,5 @@ func position_items_in_inventory():
     print(keys)
     for i in range(len(keys)):
         var item: InventoryItem = inventory_items[keys[i]]
-        item.position = Vector3(1.0 * i, 0.0, 0.0)
+        item.position = Vector3(0.5 * i, 0.0, 0.0)
         item.rotation = item.rotation_offset
