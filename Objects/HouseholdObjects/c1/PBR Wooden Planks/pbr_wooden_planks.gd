@@ -1,5 +1,7 @@
 extends Node3D
 
+@export var blocked_door: DoorAssembly = null
+
 func _ready():
     pass
 
@@ -8,8 +10,10 @@ func _process(delta):
 
 func interact():
     if Main.game.player.use_item("hatchet"):
-        # TODO: Play breaking noise
-        # TODO: Unlock door
+        if blocked_door:
+            # TODO: Play breaking noise
+            # TODO: Unlock door
+            blocked_door.locked = false
         queue_free()
     else:
         #TODO: Play other noise
