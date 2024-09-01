@@ -78,7 +78,7 @@ func openclose():
     else:
         interact_cd = INTERACT_CD
     
-    if locked and Main.game.player.use_key(required_key_name):
+    if locked and Main.game.player.use_item(required_key_name):
         unlock_noise_player.play()
         locked = false
 

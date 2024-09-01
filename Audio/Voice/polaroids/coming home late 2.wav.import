@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c11lb3nxfbplg"
+path="res://.godot/imported/coming home late 2.wav-d1f6cb13cb2eb9a0f1b8cfb7434b6d63.sample"
+
+[deps]
+
+source_file="res://Audio/Voice/polaroids/coming home late 2.wav"
+dest_files=["res://.godot/imported/coming home late 2.wav-d1f6cb13cb2eb9a0f1b8cfb7434b6d63.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

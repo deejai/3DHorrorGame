@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dshv464pdpph1"
+path="res://.godot/imported/Dance 1.wav-f8eb396a1faef23adc6a325981e016df.sample"
+
+[deps]
+
+source_file="res://Audio/Voice/polaroids/Dance 1.wav"
+dest_files=["res://.godot/imported/Dance 1.wav-f8eb396a1faef23adc6a325981e016df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce2f0jb0v273l"
+path="res://.godot/imported/hicksdevise - Mer - Make me brat.wav-98d939c358b99c33375d1d94ff115d3b.sample"
+
+[deps]
+
+source_file="res://Audio/Voice/polaroids/hicksdevise - Mer - Make me brat.wav"
+dest_files=["res://.godot/imported/hicksdevise - Mer - Make me brat.wav-98d939c358b99c33375d1d94ff115d3b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

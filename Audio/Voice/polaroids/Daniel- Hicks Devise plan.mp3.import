@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdkethi67k1hp"
+path="res://.godot/imported/Daniel- Hicks Devise plan.mp3-651c59a5ffe44e2af7ce680ca5677a72.mp3str"
+
+[deps]
+
+source_file="res://Audio/Voice/polaroids/Daniel- Hicks Devise plan.mp3"
+dest_files=["res://.godot/imported/Daniel- Hicks Devise plan.mp3-651c59a5ffe44e2af7ce680ca5677a72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdpa4rxiyfcwt"
+path="res://.godot/imported/Hicks Devise plan.mp3-eec4d4591b606647fd0db95d1533dcea.mp3str"
+
+[deps]
+
+source_file="res://Audio/Voice/Hicks Devise plan.mp3"
+dest_files=["res://.godot/imported/Hicks Devise plan.mp3-eec4d4591b606647fd0db95d1533dcea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

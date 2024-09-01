@@ -21,6 +21,8 @@ var item_index = 0
 
 func _ready():
     update_item_label()
+    button_prev.disabled = true
+    button_next.disabled = true
 
 func _process(delta):
     if not visible:

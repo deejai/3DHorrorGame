@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3qym4uq4800u"
+path="res://.godot/imported/Daniel- night of assassination.wav-5efa1c0ca874c533f0674a002b77eb6b.sample"
+
+[deps]
+
+source_file="res://Audio/Voice/polaroids/Daniel- night of assassination.wav"
+dest_files=["res://.godot/imported/Daniel- night of assassination.wav-5efa1c0ca874c533f0674a002b77eb6b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

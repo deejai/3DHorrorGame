@@ -28,6 +28,9 @@ var prev_position: Vector3
 
 @onready var delay_input_timer: Timer = $DelayInputTimer
 
+var hovered_object: Node3D = null
+var hovered_area: Area3D = null
+
 var inventory_items: Dictionary = {}
 
 func _ready():
@@ -42,18 +45,20 @@ func _process(delta):
     if Input.is_action_just_pressed("DEBUG_toggle_perspective"):
         camera_dist = camera_dist_third if camera_dist == camera_dist_first else camera_dist_first
 
+    hovered_area = grab_ray.get_collider()
+    if hovered_area is InteractiveArea:
+        hovered_object = grab_ray.get_parent()
+    else:
+        hovered_object = null
+        hovered_area = null
+
     if not inventory_canvas_node.visible:
-        if Input.is_action_just_pressed("use") and grab_ray.is_colliding():
-            var obj = grab_ray.get_collider()
-            if obj is InteractiveArea:
-                print("interact!")
-                if obj.get_parent() is InventoryItem:
-                    print("Its an inventory item!!")
-                    pickup_item(obj.get_parent())
-                else:
-                    obj.interact()
+        if Input.is_action_just_pressed("use") and hovered_object:
+            if hovered_object is InventoryItem:
+                print("Its an inventory item!!")
+                pickup_item(hovered_object)
             else:
-                print(obj)
+                hovered_area.interact()
 
         if Input.is_action_just_pressed("ui_accept"):
             if Main.game.ghost.active:
@@ -100,10 +105,13 @@ func _input(event):
             # left right body rotation
             rotation.y = rotation.y - (event.relative.x * mouse_sens * PI/1000)
 
-func use_key(name: String):
-    var key_to_use = inventory_items.get(name)
-    if key_to_use:
-        gui.generate_feedback("Used " + key_to_use.display_name + " to unlock")
+func use_item(name: String):
+    var item_to_use = inventory_items.get(name)
+    if item_to_use:
+        if item_to_use.custom_use_message != "":
+            gui.generate_feedback(item_to_use.custom_message)
+        else:
+            gui.generate_feedback("Used " + item_to_use.display_name + " to unlock")
         inventory_items.erase(name)
         position_items_in_inventory()
         return true
