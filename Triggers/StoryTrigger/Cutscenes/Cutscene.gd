@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
     time_passed += delta
-    if not audio_track.playing and time_passed >= play_delay:
+    if not started and time_passed >= play_delay:
         audio_track.play()
         started = true
 

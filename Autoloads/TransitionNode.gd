@@ -72,6 +72,7 @@ func _on_transition_timer_wait_timeout():
 
     if new_scene is Game:
         Main.game = new_scene
+        Main.game.process_mode = Node.PROCESS_MODE_INHERIT
         print("WAAOW")
 
     if free_current_scene:
